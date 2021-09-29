@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACEE232F27050BB4001F221B /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE232E27050BB4001F221B /* Root.swift */; };
 		E22DE0D727050012003D5E25 /* HotelProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0D627050012003D5E25 /* HotelProjectApp.swift */; };
 		E22DE0D927050012003D5E25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0D827050012003D5E25 /* ContentView.swift */; };
 		E22DE0DB27050014003D5E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22DE0DA27050014003D5E25 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ACEE232E27050BB4001F221B /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		E22DE0D327050012003D5E25 /* HotelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DE0D627050012003D5E25 /* HotelProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectApp.swift; sourceTree = "<group>"; };
 		E22DE0D827050012003D5E25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACEE232D27050B8C001F221B /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				ACEE233127050C84001F221B /* NewRoom */,
+				ACEE233027050C4F001F221B /* CheckIn */,
+				ACEE232E27050BB4001F221B /* Root.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		ACEE233027050C4F001F221B /* CheckIn */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckIn;
+			sourceTree = "<group>";
+		};
+		ACEE233127050C84001F221B /* NewRoom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewRoom;
+			sourceTree = "<group>";
+		};
 		E22DE0CA27050012003D5E25 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +124,7 @@
 		E22DE0D527050012003D5E25 /* HotelProject */ = {
 			isa = PBXGroup;
 			children = (
+				ACEE232D27050B8C001F221B /* Pages */,
 				E22DE0D627050012003D5E25 /* HotelProjectApp.swift */,
 				E22DE0D827050012003D5E25 /* ContentView.swift */,
 				E22DE0DA27050014003D5E25 /* Assets.xcassets */,
@@ -267,6 +294,7 @@
 				E22DE0E027050014003D5E25 /* Persistence.swift in Sources */,
 				E22DE0D927050012003D5E25 /* ContentView.swift in Sources */,
 				E22DE0D727050012003D5E25 /* HotelProjectApp.swift in Sources */,
+				ACEE232F27050BB4001F221B /* Root.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
