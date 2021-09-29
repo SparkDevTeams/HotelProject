@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ACEE232F27050BB4001F221B /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE232E27050BB4001F221B /* Root.swift */; };
+		ACEE233327050D17001F221B /* LanguageSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE233227050D17001F221B /* LanguageSelection.swift */; };
 		E22DE0D727050012003D5E25 /* HotelProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0D627050012003D5E25 /* HotelProjectApp.swift */; };
 		E22DE0D927050012003D5E25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0D827050012003D5E25 /* ContentView.swift */; };
 		E22DE0DB27050014003D5E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22DE0DA27050014003D5E25 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		ACEE232E27050BB4001F221B /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		ACEE233227050D17001F221B /* LanguageSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelection.swift; sourceTree = "<group>"; };
 		E22DE0D327050012003D5E25 /* HotelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DE0D627050012003D5E25 /* HotelProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectApp.swift; sourceTree = "<group>"; };
 		E22DE0D827050012003D5E25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				ACEE233127050C84001F221B /* NewRoom */,
 				ACEE233027050C4F001F221B /* CheckIn */,
 				ACEE232E27050BB4001F221B /* Root.swift */,
+				ACEE233227050D17001F221B /* LanguageSelection.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				E22DE0E027050014003D5E25 /* Persistence.swift in Sources */,
 				E22DE0D927050012003D5E25 /* ContentView.swift in Sources */,
 				E22DE0D727050012003D5E25 /* HotelProjectApp.swift in Sources */,
+				ACEE233327050D17001F221B /* LanguageSelection.swift in Sources */,
 				ACEE232F27050BB4001F221B /* Root.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
