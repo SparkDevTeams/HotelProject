@@ -22,43 +22,56 @@ struct NewReservation: View {
     
     var body: some View {
         
-        VStack(alignment: .leading){
-            Text("You are now reserving your room. Please enter your information below:")
-                .font(.system(size: 36))
-                .multilineTextAlignment(.leading)
-            Text("* All fields are required.")
-                .font(.system(size: 24))
+        VStack{
             
-            TextFieldComponent(labelString: "First Name", input: fName)
-            TextFieldComponent(labelString: "Last Name", input: lName)
-            
-            // TODO: Do the check in and checkout date picker in here.
-            
-            
-            
-            TextFieldComponent(labelString: "Email Address", input: email)
-            TextFieldComponent(labelString: "Address Line", input: address)
-            TextFieldComponent(labelString: "Country/Region", input: country)
-            TextFieldComponent(labelString: "Phone Number", input: phoneNumber)
-            
-            NavigationLink(destination: {Text("Awaiting next")}, label: {
-                Text("Next")
+            VStack(alignment: .leading){
+                Text("You are now reserving your room. Please enter your information below:")
+                    .font(.system(size: 36))
                     .multilineTextAlignment(.leading)
-            })
+                Text("* All fields are required.")
+                    .font(.system(size: 24))
+            }
             
+            VStack(alignment: .center){
+                
+                
+                TextFieldComponent(sfSymbol: "person.crop.circle.fill", labelString: "First Name", input: fName)
+                TextFieldComponent(sfSymbol: "person.crop.circle.fill", labelString: "Last Name", input: lName)
+                
+                // TODO: Do the check in and checkout date picker in here.
+                
+                
+                
+                TextFieldComponent(sfSymbol: "envelope.fill", labelString: "Email Address", input: email)
+                TextFieldComponent(sfSymbol: "location.circle.fill", labelString: "Address Line", input: address)
+                TextFieldComponent(sfSymbol: "pin.fill", labelString: "Country/Region", input: country)
+                TextFieldComponent(sfSymbol: "phone.fill", labelString: "Phone Number", input: phoneNumber)
+                
+                NavigationLink(destination: {Text("Awaiting next")}, label: {
+                    Text("Next")
+                        .multilineTextAlignment(.leading)
+                })
+                
+            }
             Spacer()
         }
-        .padding(.horizontal, 50.0)
     }
 }
 
 struct TextFieldComponent: View {
     
+    var sfSymbol: String
+    
     var labelString: String
     @State var input: String
     
     var body: some View {
-        TextField(labelString, text: $input)
+        HStack{
+            Image(systemName: sfSymbol)
+            TextField(labelString, text: $input)
+                .frame(width: /*@START_MENU_TOKEN@*/400.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/)
+        }.padding(.vertical, 2.5).textFieldStyle(RoundedBorderTextFieldStyle())
+        
     }
     
 }
@@ -66,5 +79,6 @@ struct TextFieldComponent: View {
 struct NewReservation_Previews: PreviewProvider {
     static var previews: some View {
         NewReservation()
+            .previewDevice("iPad Pro (11-inch) (3rd generation)")
     }
 }
