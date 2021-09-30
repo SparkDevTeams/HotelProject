@@ -11,14 +11,15 @@ import SwiftUI
 
 struct NewReservation: View {
     
-    // I do not know what to use for the dates.
-    
     @State private var fName: String = ""
     @State private var lName: String = ""
     @State private var email: String = ""
     @State private var address: String = ""
     @State private var country: String = ""
     @State private var phoneNumber: String = ""
+    
+    @State var checkin = Date()
+    @State var checkout =  Date()
     
     var body: some View {
         
@@ -39,6 +40,21 @@ struct NewReservation: View {
                 TextFieldComponent(sfSymbol: "person.crop.circle.fill", labelString: "Last Name", input: lName)
                 
                 // TODO: Do the check in and checkout date picker in here.
+                
+                HStack{
+                    // Do I want to move this whole H-stack to the bottom making it
+                    DatePicker(
+                            "Check-in Date",
+                            selection: $checkin,
+                            displayedComponents: [.date]
+                    ).padding(.trailing, 20.0).datePickerStyle(.compact)
+                    
+                    DatePicker(
+                            "Check-out date",
+                            selection: $checkout,
+                            displayedComponents: [.date]
+                    ).padding(.leading, 20.0).datePickerStyle(.compact)
+                }.frame(width: 500)
                 
                 
                 
@@ -69,7 +85,7 @@ struct TextFieldComponent: View {
         HStack{
             Image(systemName: sfSymbol)
             TextField(labelString, text: $input)
-                .frame(width: /*@START_MENU_TOKEN@*/400.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/)
+                .frame(width: 500, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/)
         }.padding(.vertical, 2.5).textFieldStyle(RoundedBorderTextFieldStyle())
         
     }
@@ -78,7 +94,9 @@ struct TextFieldComponent: View {
 
 struct NewReservation_Previews: PreviewProvider {
     static var previews: some View {
-        NewReservation()
-            .previewDevice("iPad Pro (11-inch) (3rd generation)")
+        Group {
+            NewReservation()
+                .previewDevice("iPad Pro (11-inch) (3rd generation)")
+        }
     }
 }
