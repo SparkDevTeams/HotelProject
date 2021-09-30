@@ -19,6 +19,7 @@
 		E22DE0ED27050014003D5E25 /* HotelProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0EC27050014003D5E25 /* HotelProjectTests.swift */; };
 		E22DE0F727050014003D5E25 /* HotelProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0F627050014003D5E25 /* HotelProjectUITests.swift */; };
 		E22DE0F927050014003D5E25 /* HotelProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0F827050014003D5E25 /* HotelProjectUITestsLaunchTests.swift */; };
+		E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE10627061D04003D5E25 /* RoomSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		E22DE0F227050014003D5E25 /* HotelProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DE0F627050014003D5E25 /* HotelProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectUITests.swift; sourceTree = "<group>"; };
 		E22DE0F827050014003D5E25 /* HotelProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E22DE10627061D04003D5E25 /* RoomSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +86,9 @@
 		ACEE232D27050B8C001F221B /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				E22DE10527061CBC003D5E25 /* Room Selection */,
 				ACEE233127050C84001F221B /* NewRoom */,
 				ACEE233027050C4F001F221B /* CheckIn */,
-				ACEE232E27050BB4001F221B /* Root.swift */,
-				ACEE233227050D17001F221B /* LanguageSelection.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -95,6 +96,8 @@
 		ACEE233027050C4F001F221B /* CheckIn */ = {
 			isa = PBXGroup;
 			children = (
+				ACEE233227050D17001F221B /* LanguageSelection.swift */,
+				ACEE232E27050BB4001F221B /* Root.swift */,
 			);
 			path = CheckIn;
 			sourceTree = "<group>";
@@ -164,6 +167,14 @@
 				E22DE0F827050014003D5E25 /* HotelProjectUITestsLaunchTests.swift */,
 			);
 			path = HotelProjectUITests;
+			sourceTree = "<group>";
+		};
+		E22DE10527061CBC003D5E25 /* Room Selection */ = {
+			isa = PBXGroup;
+			children = (
+				E22DE10627061D04003D5E25 /* RoomSelection.swift */,
+			);
+			path = "Room Selection";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E22DE0E327050014003D5E25 /* HotelProject.xcdatamodeld in Sources */,
+				E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */,
 				AC8AD7702705303800111B31 /* NewReservation.swift in Sources */,
 				E22DE0E027050014003D5E25 /* Persistence.swift in Sources */,
 				E22DE0D927050012003D5E25 /* ContentView.swift in Sources */,
