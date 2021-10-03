@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC44FD0927074C6F002B83C3 /* ReservationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */; };
 		AC8AD7702705303800111B31 /* NewReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AD76F2705303800111B31 /* NewReservation.swift */; };
+		ACCE7F5F270A2C50004041B6 /* CheckIn_or_NewRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE7F5E270A2C50004041B6 /* CheckIn_or_NewRoom.swift */; };
 		ACEE232F27050BB4001F221B /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE232E27050BB4001F221B /* Root.swift */; };
 		ACEE233327050D17001F221B /* LanguageSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE233227050D17001F221B /* LanguageSelection.swift */; };
 		E22DE0D727050012003D5E25 /* HotelProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0D627050012003D5E25 /* HotelProjectApp.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationSearch.swift; sourceTree = "<group>"; };
 		AC8AD76F2705303800111B31 /* NewReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReservation.swift; sourceTree = "<group>"; };
+		ACCE7F5E270A2C50004041B6 /* CheckIn_or_NewRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIn_or_NewRoom.swift; sourceTree = "<group>"; };
 		ACEE232E27050BB4001F221B /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		ACEE233227050D17001F221B /* LanguageSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelection.swift; sourceTree = "<group>"; };
 		E22DE0D327050012003D5E25 /* HotelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 				AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */,
 				ACEE233227050D17001F221B /* LanguageSelection.swift */,
 				ACEE232E27050BB4001F221B /* Root.swift */,
+				ACCE7F5E270A2C50004041B6 /* CheckIn_or_NewRoom.swift */,
 			);
 			path = CheckIn;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				E22DE0E027050014003D5E25 /* Persistence.swift in Sources */,
 				E22DE0D927050012003D5E25 /* ContentView.swift in Sources */,
 				E22DE0D727050012003D5E25 /* HotelProjectApp.swift in Sources */,
+				ACCE7F5F270A2C50004041B6 /* CheckIn_or_NewRoom.swift in Sources */,
 				AC44FD0927074C6F002B83C3 /* ReservationSearch.swift in Sources */,
 				ACEE233327050D17001F221B /* LanguageSelection.swift in Sources */,
 				ACEE232F27050BB4001F221B /* Root.swift in Sources */,

@@ -9,6 +9,9 @@
 
 import SwiftUI
 
+var totalWidth: CGFloat = 600
+var lineWidth: CGFloat = 2.5
+
 struct NewReservation: View {
     
     @State private var fName: String = ""
@@ -17,9 +20,13 @@ struct NewReservation: View {
     @State private var address: String = ""
     @State private var country: String = ""
     @State private var phoneNumber: String = ""
+    @State private var zipcode: Int = 000000
+    // only if the person lives in the united states. If they do then an extra text field will pop up.
     
     @State var checkin = Date()
     @State var checkout =  Date()
+    
+    
     
     var body: some View {
         
@@ -44,29 +51,38 @@ struct NewReservation: View {
                 HStack{
                     // Do I want to move this whole H-stack to the bottom making it
                     DatePicker(
-                            "Check-in Date",
-                            selection: $checkin,
-                            displayedComponents: [.date]
-                    ).padding(.trailing, 20.0).datePickerStyle(.compact)
+                        "Check-in",
+                        selection: $checkin,
+                        displayedComponents: [.date]
+                    ).padding().datePickerStyle(.compact).overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding()
                     
                     DatePicker(
-                            "Check-out date",
-                            selection: $checkout,
-                            displayedComponents: [.date]
-                    ).padding(.leading, 20.0).datePickerStyle(.compact)
-                }.frame(width: 500)
+                        "Check-out",
+                        selection: $checkout,
+                        displayedComponents: [.date]
+                    ).padding().datePickerStyle(.compact).overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding()
+                }.frame(width: totalWidth)
                 
                 
                 
                 TextFieldComponent(sfSymbol: "envelope.fill", labelString: "Email Address", input: email)
-                TextFieldComponent(sfSymbol: "location.circle.fill", labelString: "Address Line", input: address)
                 TextFieldComponent(sfSymbol: "pin.fill", labelString: "Country/Region", input: country)
+                // country == "United States" ? TextFieldComponent(sfSymbol: "pin.full", labelString: "Zip Code", input: String(zipcode)) : nil
+                TextFieldComponent(sfSymbol: "location.circle.fill", labelString: "Address Line", input: address)
                 TextFieldComponent(sfSymbol: "phone.fill", labelString: "Phone Number", input: phoneNumber)
                 
-                NavigationLink(destination: {Text("Awaiting next")}, label: {
-                    Text("Next")
+                NavigationLink(destination: RoomSelection(showProfile: .constant(false)), label: {
+                    Text("Next").font(.system(size: 24))
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 200, height: 75)
+                        .background(
+                            Color.black
+                                .cornerRadius(20)
                         .multilineTextAlignment(.leading)
-                })
+                )}).padding()
                 
             }
             Spacer()
@@ -83,10 +99,11 @@ struct TextFieldComponent: View {
     
     var body: some View {
         HStack{
-            Image(systemName: sfSymbol)
+            Image(systemName: sfSymbol).padding()
             TextField(labelString, text: $input)
-                .frame(width: 500, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/)
-        }.padding(.vertical, 2.5).textFieldStyle(RoundedBorderTextFieldStyle())
+        }.padding(5)
+            .overlay(RoundedRectangle(
+                cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
         
     }
     

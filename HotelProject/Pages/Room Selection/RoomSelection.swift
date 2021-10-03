@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RoomSelection: View {
+    // what is this binding var for? - Vincent
     @Binding var showProfile : Bool
     var body: some View {
         VStack {
@@ -35,6 +36,7 @@ struct RoomSelection: View {
 
 
 struct RoomSelection_Previews: PreviewProvider {
+    // why do we need parameter show profile
     static var previews: some View {
         RoomSelection(showProfile: .constant(false))
     }

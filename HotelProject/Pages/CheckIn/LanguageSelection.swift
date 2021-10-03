@@ -30,12 +30,12 @@ struct languageBtn: View {
     
     
     var body: some View {
-        NavigationLink(destination: {
-            Text(languageLabel == "English" ? "English" : "Language not yet supported")
+        NavigationLink(destination: CheckIn_or_NewRoom()
+            //Text(languageLabel == "English" ? "English" : "Language not yet supported")
             // !
             // !TODO: replace first ternary "English" (after ?) with another SwiftUI View
             // !
-        }, label: {Text(languageLabel).font(.system(size: 36)).foregroundColor(Color.black)})
+        , label: {Text(languageLabel).font(.system(size: 36)).foregroundColor(Color.black)})
             .padding()
     }
 }
