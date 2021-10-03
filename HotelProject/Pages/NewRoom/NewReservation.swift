@@ -95,8 +95,13 @@ struct TextFieldComponent: View {
 struct NewReservation_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            NewReservation()
-                .previewDevice("iPad Pro (11-inch) (3rd generation)")
+            if #available(iOS 15.0, *) {
+                NewReservation()
+                    .previewDevice("iPad Pro (11-inch) (3rd generation)")
+                    .previewInterfaceOrientation(.portrait)
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
 }
