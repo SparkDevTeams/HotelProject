@@ -73,7 +73,7 @@ struct NewReservation: View {
                 TextFieldComponent(sfSymbol: "location.circle.fill", labelString: "Address Line", input: address)
                 TextFieldComponent(sfSymbol: "phone.fill", labelString: "Phone Number", input: phoneNumber)
                 
-                NavigationLink(destination: RoomSelection(showProfile: .constant(false)), label: {
+                NavigationLink(destination: RoomSelection(), label: {
                     Text("Next").font(.system(size: 24))
                         .fontWeight(.semibold)
                         .foregroundColor(.white)

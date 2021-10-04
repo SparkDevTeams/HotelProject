@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct RoomSelection: View {
-    // what is this binding var for? - Vincent
-    @Binding var showProfile : Bool
+    
     var body: some View {
         VStack {
             HStack {
@@ -17,17 +16,19 @@ struct RoomSelection: View {
                     .font(.system(size: 30, weight: .bold))
                 Spacer()
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 300)
             .padding(.top, 30)
             
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 30) {
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 30) {
                     ForEach(0 ..< 4) { item in
                         SectionView()
                     }
+                    .padding()
                 }
-                .padding(40)
-                .padding(.top, 80)
+                .padding()
+                .padding(.top, 40)
             }
             Spacer()
         }
@@ -38,7 +39,7 @@ struct RoomSelection: View {
 struct RoomSelection_Previews: PreviewProvider {
     // why do we need parameter show profile
     static var previews: some View {
-        RoomSelection(showProfile: .constant(false))
+        RoomSelection()
     }
 }
 
@@ -48,26 +49,24 @@ struct SectionView: View {
             HStack (alignment: .top){
                 Text("King Suite Room")
                     .font(.system(size: 34, weight: .bold))
-                    .frame(width: 300)
+                    .frame(width: 500)
                     .foregroundColor(.white)
-                    .padding(.top, 15)
+                    .padding(.top, 20)
                     .padding(.bottom, 5)
-
-                
             }
             Text("2 bed | 1 sofa".uppercased())
                 .frame(maxWidth: .infinity, alignment: .center)
+                .foregroundColor(.white)
             Image("roomPhoto2")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 400)
                 .cornerRadius(20)
-            
         }
         .padding(.bottom, 40)
         .padding(.horizontal, 30)
-        .frame(width:450, height: 400)
-        .background(Color("card2"))
+        .frame(width:550, height: 400)
+        .background(Color("secondary"))
         .cornerRadius(30)
         .shadow(color: Color("card1").opacity(0.3), radius: 20, x: 0, y: 20)
     }
