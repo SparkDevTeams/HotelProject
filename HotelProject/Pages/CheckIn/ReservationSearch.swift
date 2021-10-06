@@ -19,7 +19,7 @@ struct ReservationSearch: View {
                 .font(.system(size: 48))
                 .fontWeight(.medium)
                 .padding()
-    
+            
             
             TextField("Tap here to enter your reservation number: ", text: $ReservationNumber)
                 .padding()
@@ -29,20 +29,31 @@ struct ReservationSearch: View {
                 )
                 .font(.system(size: 24))
                 .padding(.horizontal, 100)
-                
-            Button {
-                self.ReservationNumber = "10" //Change in future. Need to make it go to another view. Add if statements and such.
-            } label: {
-                Text("Submit")
-                    .font(.system(size: 24))
+            
+            NavigationLink(destination: FoundReservation(), label: {Text("Submit").font(.system(size: 24))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .frame(width: 300, height: 100)
                     .background(
                         Color.black
                             .cornerRadius(20)
-                    )
-            }
+                    )})
+            
+            /*
+             Button {
+             self.ReservationNumber = "10" //Change in future. Need to make it go to another view. Add if statements and such.
+             } label: {
+             Text("Submit")
+             .font(.system(size: 24))
+             .fontWeight(.semibold)
+             .foregroundColor(.white)
+             .frame(width: 300, height: 100)
+             .background(
+             Color.black
+             .cornerRadius(20)
+             )
+             }
+             */
             Spacer()
         }
         .padding()
