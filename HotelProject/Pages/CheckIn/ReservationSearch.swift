@@ -10,23 +10,11 @@ import SwiftUI
 struct ReservationSearch: View {
     
     @State var ReservationNumber: String = ""
-    @Environment(\.presentationMode) var presentationMode
+    
     
     var body: some View {
-        VStack(spacing: 50){
-            HStack {
-                Button {
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Label("Back", systemImage: "arrow.left.to.line.alt")
-                        .font(.system(size: 30))
-                        .foregroundColor(Color.black)
-                        .padding()
-                }
-                Spacer()
-            }
+        VStack(alignment: .center, spacing: 50){
             Spacer()
-            
             Text("What is your reservation number?")
                 .font(.system(size: 48))
                 .fontWeight(.medium)
@@ -58,7 +46,7 @@ struct ReservationSearch: View {
             Spacer()
         }
         .padding()
-        .navigationBarHidden(true)
+        
     }
 }
 
