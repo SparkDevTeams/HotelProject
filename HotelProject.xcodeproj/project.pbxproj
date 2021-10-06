@@ -23,6 +23,7 @@
 		E22DE0F727050014003D5E25 /* HotelProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0F627050014003D5E25 /* HotelProjectUITests.swift */; };
 		E22DE0F927050014003D5E25 /* HotelProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0F827050014003D5E25 /* HotelProjectUITestsLaunchTests.swift */; };
 		E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE10627061D04003D5E25 /* RoomSelection.swift */; };
+		E25E130A270E5002005A9496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E1309270E5002005A9496 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		E22DE0F627050014003D5E25 /* HotelProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectUITests.swift; sourceTree = "<group>"; };
 		E22DE0F827050014003D5E25 /* HotelProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E22DE10627061D04003D5E25 /* RoomSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSelection.swift; sourceTree = "<group>"; };
+		E25E1309270E5002005A9496 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				E22DE10627061D04003D5E25 /* RoomSelection.swift */,
+				E25E1309270E5002005A9496 /* ViewController.swift */,
 			);
 			path = "Room Selection";
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				AC8AD7702705303800111B31 /* NewReservation.swift in Sources */,
 				E22DE0E027050014003D5E25 /* Persistence.swift in Sources */,
 				E22DE0D927050012003D5E25 /* ContentView.swift in Sources */,
+				E25E130A270E5002005A9496 /* ViewController.swift in Sources */,
 				E22DE0D727050012003D5E25 /* HotelProjectApp.swift in Sources */,
 				ACCE7F5F270A2C50004041B6 /* CheckIn_or_NewRoom.swift in Sources */,
 				AC44FD0927074C6F002B83C3 /* ReservationSearch.swift in Sources */,
