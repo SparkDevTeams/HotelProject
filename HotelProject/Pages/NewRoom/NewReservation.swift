@@ -64,6 +64,7 @@ struct NewReservation: View {
                     ).padding().datePickerStyle(.compact).overlay(RoundedRectangle(
                         cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding()
                 }.frame(width: totalWidth)
+                // TODO: Make the check-in time selectors in another h stack
                 
                 
                 

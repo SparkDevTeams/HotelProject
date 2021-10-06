@@ -11,8 +11,17 @@ struct CheckIn_or_NewRoom: View {
     var body: some View {
         // TODO: Style this page Zeshan.
         VStack{
-            Text("Style this page, I just needed this page to test all the other ui stuff")
-            NavigationLink(destination: NewReservation(), label: {Text("New Reservation")})
+            NavigationLink(destination: NewReservation(), label: {
+                Text("I Have a Reservation").font(.system(size: 24))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .frame(width: 200, height: 75)
+                    .background(
+                        Color.black
+                            .cornerRadius(20)
+                    .multilineTextAlignment(.leading)
+            )}).padding()
+                
             NavigationLink(destination: ReservationSearch(), label: {Text("I have a reservation")})
 
         }

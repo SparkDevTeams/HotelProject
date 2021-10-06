@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC44FD0927074C6F002B83C3 /* ReservationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */; };
+		AC885E5A270BA3F600A5D8DA /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC885E59270BA3F600A5D8DA /* Styles.swift */; };
 		AC8AD7702705303800111B31 /* NewReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AD76F2705303800111B31 /* NewReservation.swift */; };
 		ACCE7F5F270A2C50004041B6 /* CheckIn_or_NewRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE7F5E270A2C50004041B6 /* CheckIn_or_NewRoom.swift */; };
 		ACEE232F27050BB4001F221B /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE232E27050BB4001F221B /* Root.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationSearch.swift; sourceTree = "<group>"; };
+		AC885E59270BA3F600A5D8DA /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		AC8AD76F2705303800111B31 /* NewReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReservation.swift; sourceTree = "<group>"; };
 		ACCE7F5E270A2C50004041B6 /* CheckIn_or_NewRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIn_or_NewRoom.swift; sourceTree = "<group>"; };
 		ACEE232E27050BB4001F221B /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				E22DE0DF27050014003D5E25 /* Persistence.swift */,
 				E22DE0E127050014003D5E25 /* HotelProject.xcdatamodeld */,
 				E22DE0DC27050014003D5E25 /* Preview Content */,
+				AC885E59270BA3F600A5D8DA /* Styles.swift */,
 			);
 			path = HotelProject;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC885E5A270BA3F600A5D8DA /* Styles.swift in Sources */,
 				E22DE0E327050014003D5E25 /* HotelProject.xcdatamodeld in Sources */,
 				E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */,
 				AC8AD7702705303800111B31 /* NewReservation.swift in Sources */,
