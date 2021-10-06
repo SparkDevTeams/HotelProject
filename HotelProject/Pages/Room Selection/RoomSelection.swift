@@ -22,8 +22,14 @@ struct RoomSelection: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 30) {
-                    ForEach(0 ..< 4) { item in
-                        SectionView()
+                    //Loops through the sectionData array at the bottom
+                    ForEach(sectionData) { item in
+                        
+                        //ToDo: I need to fix this and actually make it look good..., I only merely called the functions.
+                        GeometryReader { geometry in
+                            SectionView(section: item)
+                                .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -50), axis: (x:20, y: 0, z: 0))
+                        }.frame(width: 550, height: 400)
                     }
                     .padding()
                 }
@@ -37,27 +43,29 @@ struct RoomSelection: View {
 
 
 struct RoomSelection_Previews: PreviewProvider {
-    // why do we need parameter show profile
     static var previews: some View {
         RoomSelection()
     }
 }
 
+
 struct SectionView: View {
+    var section: RoomCard
     var body: some View {
         VStack (alignment: .center) {
             HStack (alignment: .top){
-                Text("King Suite Room")
+                Text(section.title)
                     .font(.system(size: 34, weight: .bold))
                     .frame(width: 500)
                     .foregroundColor(.white)
                     .padding(.top, 20)
                     .padding(.bottom, 5)
             }
-            Text("2 bed | 1 sofa".uppercased())
+            Text(section.text.uppercased())
                 .frame(maxWidth: .infinity, alignment: .center)
                 .foregroundColor(.white)
-            Image("roomPhoto2")
+            
+            section.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 400)
@@ -66,8 +74,33 @@ struct SectionView: View {
         .padding(.bottom, 40)
         .padding(.horizontal, 30)
         .frame(width:550, height: 400)
-        .background(Color("secondary"))
+        .background(section.color)
         .cornerRadius(30)
-        .shadow(color: Color("card1").opacity(0.3), radius: 20, x: 0, y: 20)
+        .shadow(color: section.color.opacity(0.3), radius: 20, x: 0, y: 20)
     }
 }
+
+//Properties of each room Card
+struct RoomCard: Identifiable {
+    var id = UUID()
+    var title: String
+    var text: String
+    var image: Image
+    var color: Color
+}
+
+
+//I need to set the color to grab from color literal for easy testing
+//Image can also be set to uiImage.
+let sectionData = [
+    
+    RoomCard(title: "King Suite Room", text: "2 BED | 1 SOFA", image: Image("roomPhoto2"), color: Color("secondary")),
+    
+    RoomCard(title: "Second Room Test", text: "1 bed | 1 sofa", image: Image("roomPhoto1"), color: Color("secondary")),
+    
+    RoomCard(title: "Third Room Test", text: "1 bed | 0 sofa", image: Image("roomPhoto1"), color: Color("secondary"))
+    
+]
+
+
+
