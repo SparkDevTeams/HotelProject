@@ -12,12 +12,14 @@ struct RoomSelection: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Room Selection")
-                    .font(.system(size: 30, weight: .bold))
+                Text("What type of room would you like ?")
+                    .font(.system(size: 35, weight: .bold))
+                    .frame(width: 800, height: 100, alignment: .center)
                 Spacer()
             }
-            .padding(.horizontal, 300)
-            .padding(.top, 30)
+            .padding(.horizontal, 500)
+            .padding(.top, 10)
+            .padding(.bottom, 10)
             
             
             ScrollView(.vertical, showsIndicators: false) {
@@ -28,13 +30,16 @@ struct RoomSelection: View {
                         //ToDo: I need to fix this and actually make it look good..., I only merely called the functions.
                         GeometryReader { geometry in
                             SectionView(section: item)
-                                .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -50), axis: (x:20, y: 0, z: 0))
-                        }.frame(width: 550, height: 400)
+                                .padding(.top, 20)
+                                .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minY - 300) / -20), axis: (x:100, y: 0, z: 0))
+                                
+                        }.frame(width: 600, height: 400)
                     }
-                    .padding()
+                    .padding(.bottom, 100)
+                    
                 }
                 .padding()
-                .padding(.top, 40)
+                .padding(.top, 200)
             }
             Spacer()
         }
@@ -54,9 +59,9 @@ struct SectionView: View {
     var body: some View {
         VStack (alignment: .center) {
             HStack (alignment: .top){
-                Text(section.title)
-                    .font(.system(size: 34, weight: .bold))
-                    .frame(width: 500)
+                Text(section.title + " from " + section.price + " a night.")
+                    .font(.system(size: 20, weight: .bold))
+                    .frame(width: 400)
                     .foregroundColor(.white)
                     .padding(.top, 20)
                     .padding(.bottom, 5)
@@ -68,17 +73,20 @@ struct SectionView: View {
             section.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 400)
-                .cornerRadius(20)
+                .frame(width: 450)
+                .cornerRadius(30)
         }
-        .padding(.bottom, 40)
-        .padding(.horizontal, 30)
-        .frame(width:550, height: 400)
+        .frame(width: 500, height: 400)
+        .padding(.bottom, 10)
+        .padding(.horizontal, 40)
         .background(section.color)
-        .cornerRadius(30)
+        .cornerRadius(50)
         .shadow(color: section.color.opacity(0.3), radius: 20, x: 0, y: 20)
+        
+        
     }
 }
+    
 
 //Properties of each room Card
 struct RoomCard: Identifiable {
@@ -87,6 +95,7 @@ struct RoomCard: Identifiable {
     var text: String
     var image: Image
     var color: Color
+    var price: String
 }
 
 
@@ -94,13 +103,17 @@ struct RoomCard: Identifiable {
 //Image can also be set to uiImage.
 let sectionData = [
     
-    RoomCard(title: "King Suite Room", text: "2 BED | 1 SOFA", image: Image("roomPhoto2"), color: Color("secondary")),
     
-    RoomCard(title: "Second Room Test", text: "1 bed | 1 sofa", image: Image("roomPhoto1"), color: Color("secondary")),
+    RoomCard(title: "Double King Suite", text: "2 BED | 1 SOFA", image: Image("roomPhoto2"), color: Color("card4"), price: "$329"),
     
-    RoomCard(title: "Third Room Test", text: "1 bed | 0 sofa", image: Image("roomPhoto1"), color: Color("secondary"))
+    RoomCard(title: "Suite", text: "1 bed | 1 sofa", image: Image("roomPhoto1"), color: Color("background2"), price: "$329"),
+    
+    RoomCard(title: "Double Suite", text: "1 bed | 0 sofa", image: Image("roomPhoto1"), color: Color("card4"), price: "$149"),
+    
+    RoomCard(title: "King Suite", text: "1 bed | 0 sofa", image: Image("roomPhoto1"), color: Color("background2"), price: "$169")
     
 ]
+
 
 
 
