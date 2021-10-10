@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		630D3903270E4FA400BD76D3 /* PaymentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630D3902270E4FA400BD76D3 /* PaymentPage.swift */; };
 		AC439FB9270E3EFD004185CE /* FoundReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC439FB8270E3EFD004185CE /* FoundReservation.swift */; };
 		AC439FBB270E3FC1004185CE /* Checkin_Fingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */; };
-		AC439FBD270E4038004185CE /* SuccessfullyCheckedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC439FBC270E4038004185CE /* SuccessfullyCheckedIn.swift */; };
 		AC44FD0927074C6F002B83C3 /* ReservationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */; };
 		AC885E5A270BA3F600A5D8DA /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC885E59270BA3F600A5D8DA /* Styles.swift */; };
 		AC8AD7702705303800111B31 /* NewReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AD76F2705303800111B31 /* NewReservation.swift */; };
@@ -51,7 +50,6 @@
 		630D3902270E4FA400BD76D3 /* PaymentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPage.swift; sourceTree = "<group>"; };
 		AC439FB8270E3EFD004185CE /* FoundReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundReservation.swift; sourceTree = "<group>"; };
 		AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin_Fingerprint.swift; sourceTree = "<group>"; };
-		AC439FBC270E4038004185CE /* SuccessfullyCheckedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfullyCheckedIn.swift; sourceTree = "<group>"; };
 		AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationSearch.swift; sourceTree = "<group>"; };
 		AC885E59270BA3F600A5D8DA /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		AC8AD76F2705303800111B31 /* NewReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReservation.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				ACCE7F5E270A2C50004041B6 /* CheckIn_or_NewRoom.swift */,
 				AC439FB8270E3EFD004185CE /* FoundReservation.swift */,
 				AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */,
-				AC439FBC270E4038004185CE /* SuccessfullyCheckedIn.swift */,
 				630D3902270E4FA400BD76D3 /* PaymentPage.swift */,
 			);
 			path = CheckIn;
@@ -281,7 +278,7 @@
 				};
 			};
 			buildConfigurationList = E22DE0CE27050012003D5E25 /* Build configuration list for PBXProject "HotelProject" */;
-			compatibilityVersion = "Xcode 11.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

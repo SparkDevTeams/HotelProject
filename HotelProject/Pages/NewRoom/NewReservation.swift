@@ -73,7 +73,6 @@ struct NewReservation: View {
                 // country == "United States" ? TextFieldComponent(sfSymbol: "pin.full", labelString: "Zip Code", input: String(zipcode)) : nil
                 TextFieldComponent(sfSymbol: "location.circle.fill", labelString: "Address Line", input: address)
                 TextFieldComponent(sfSymbol: "phone.fill", labelString: "Phone Number", input: phoneNumber)
-                
                 NavigationLink(destination: RoomSelection(), label: {
                     Text("Next").font(.system(size: 24))
                         .fontWeight(.semibold)

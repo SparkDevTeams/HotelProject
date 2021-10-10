@@ -21,7 +21,7 @@ struct Checkin_Fingerprint: View {
             }
             
             Text("It will start scanning once you put your finger to the scanner.")
-            NavigationLink(destination: SuccessfullyCheckedIn(), label: {Text("Check in!")})
+            NavigationLink(destination: {Text("Replace With actual file")}, label: {Text("Check in!")})
         }
     }
 }
