@@ -14,29 +14,57 @@ struct LanguageSelection: View {
             Text("Select your language:")
                 .font(.system(size: 48))
                 .fontWeight(.medium)
-            languageBtn(languageLabel: "English")
-            languageBtn(languageLabel: "Spanish")
-            languageBtn(languageLabel: "French")
-            languageBtn(languageLabel: "Mandarin")
+            
+            NavigationLink(destination: CheckIn_or_NewRoom(), label: {
+                Text("🇬🇧 English")
+                    .font(.system(size: 36))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 400, height: 75)
+                    .background(
+                        Color.black
+                            .cornerRadius(20)
+            )}).padding()
+            
+            NavigationLink(destination: LanguageNotSupported(), label: {
+                Text("Español")
+                    .font(.system(size: 36))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 400, height: 75)
+                    .background(
+                        Color.black
+                            .cornerRadius(20)
+            )}).padding()
+            
+            NavigationLink(destination: LanguageNotSupported(), label: {
+                Text("Française")
+                    .font(.system(size: 36))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 400, height: 75)
+                    .background(
+                        Color.black
+                            .cornerRadius(20)
+            )}).padding()
+            
+            NavigationLink(destination: LanguageNotSupported(), label: {
+                Text("普通话")
+                    .font(.system(size: 36))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 400, height: 75)
+                    .background(
+                        Color.black
+                            .cornerRadius(20)
+            )}).padding()
             
         }
         
-    }
-}
-
-
-struct languageBtn: View {
-    var languageLabel: String
-    
-    
-    var body: some View {
-        NavigationLink(destination: CheckIn_or_NewRoom()
-            //Text(languageLabel == "English" ? "English" : "Language not yet supported")
-            // !
-            // !TODO: replace first ternary "English" (after ?) with another SwiftUI View
-            // !
-        , label: {Text(languageLabel).font(.system(size: 36)).foregroundColor(Color.black)})
-            .padding()
     }
 }
 

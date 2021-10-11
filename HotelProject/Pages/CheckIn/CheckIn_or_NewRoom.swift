@@ -9,20 +9,34 @@ import SwiftUI
 
 struct CheckIn_or_NewRoom: View {
     var body: some View {
-        // TODO: Style this page Zeshan.
         VStack{
+            Text("Do you have a reservation?")
+                .font(.system(size: 48))
+                .fontWeight(.medium)
+            
             NavigationLink(destination: NewReservation(), label: {
-                Text("I Have a Reservation").font(.system(size: 24))
+                Text("I have a reservation")
+                    .font(.system(size: 36))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
-                    .frame(width: 200, height: 75)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 400, height: 100)
                     .background(
                         Color.black
                             .cornerRadius(20)
-                    .multilineTextAlignment(.leading)
             )}).padding()
                 
-            NavigationLink(destination: ReservationSearch(), label: {Text("I have a reservation")})
+            NavigationLink(destination: NewReservation(), label: {
+                Text("I don't have a reservation")
+                    .font(.system(size: 36))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 400, height: 100)
+                    .background(
+                        Color.black
+                            .cornerRadius(20)
+            )}).padding()
 
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		279ADDB22714E92B0043B5FD /* LanguageNotSupported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279ADDB12714E92B0043B5FD /* LanguageNotSupported.swift */; };
 		630D3903270E4FA400BD76D3 /* PaymentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630D3902270E4FA400BD76D3 /* PaymentPage.swift */; };
 		AC439FB9270E3EFD004185CE /* FoundReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC439FB8270E3EFD004185CE /* FoundReservation.swift */; };
 		AC439FBB270E3FC1004185CE /* Checkin_Fingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		279ADDB12714E92B0043B5FD /* LanguageNotSupported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageNotSupported.swift; sourceTree = "<group>"; };
 		630D3902270E4FA400BD76D3 /* PaymentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPage.swift; sourceTree = "<group>"; };
 		AC439FB8270E3EFD004185CE /* FoundReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundReservation.swift; sourceTree = "<group>"; };
 		AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin_Fingerprint.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				AC439FB8270E3EFD004185CE /* FoundReservation.swift */,
 				AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */,
 				630D3902270E4FA400BD76D3 /* PaymentPage.swift */,
+				279ADDB12714E92B0043B5FD /* LanguageNotSupported.swift */,
 			);
 			path = CheckIn;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279ADDB22714E92B0043B5FD /* LanguageNotSupported.swift in Sources */,
 				AC885E5A270BA3F600A5D8DA /* Styles.swift in Sources */,
 				E22DE0E327050014003D5E25 /* HotelProject.xcdatamodeld in Sources */,
 				E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */,
