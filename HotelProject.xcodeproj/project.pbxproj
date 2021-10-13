@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		630D3903270E4FA400BD76D3 /* PaymentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630D3902270E4FA400BD76D3 /* PaymentPage.swift */; };
+		AC2BA1D72714C9DE00804672 /* guests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2BA1D62714C9DE00804672 /* guests.swift */; };
 		AC439FB9270E3EFD004185CE /* FoundReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC439FB8270E3EFD004185CE /* FoundReservation.swift */; };
 		AC439FBB270E3FC1004185CE /* Checkin_Fingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */; };
 		AC44FD0927074C6F002B83C3 /* ReservationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		630D3902270E4FA400BD76D3 /* PaymentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPage.swift; sourceTree = "<group>"; };
+		AC2BA1D62714C9DE00804672 /* guests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = guests.swift; path = ../../../../../../Desktop/guests.swift; sourceTree = "<group>"; };
 		AC439FB8270E3EFD004185CE /* FoundReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundReservation.swift; sourceTree = "<group>"; };
 		AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin_Fingerprint.swift; sourceTree = "<group>"; };
 		AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationSearch.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2BA1D52714C9B600804672 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				AC2BA1D62714C9DE00804672 /* guests.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		ACEE232D27050B8C001F221B /* Pages */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +162,7 @@
 		E22DE0D527050012003D5E25 /* HotelProject */ = {
 			isa = PBXGroup;
 			children = (
+				AC2BA1D52714C9B600804672 /* services */,
 				ACEE232D27050B8C001F221B /* Pages */,
 				E22DE0D627050012003D5E25 /* HotelProjectApp.swift */,
 				E22DE0D827050012003D5E25 /* ContentView.swift */,
@@ -330,6 +341,7 @@
 			files = (
 				AC885E5A270BA3F600A5D8DA /* Styles.swift in Sources */,
 				E22DE0E327050014003D5E25 /* HotelProject.xcdatamodeld in Sources */,
+				AC2BA1D72714C9DE00804672 /* guests.swift in Sources */,
 				E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */,
 				630D3903270E4FA400BD76D3 /* PaymentPage.swift in Sources */,
 				AC439FBB270E3FC1004185CE /* Checkin_Fingerprint.swift in Sources */,

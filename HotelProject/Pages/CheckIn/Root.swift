@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Root: View {
+    
     var body: some View {
         NavigationView {
             // This is the root naviagtion view.

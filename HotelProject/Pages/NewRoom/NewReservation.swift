@@ -12,7 +12,12 @@ import SwiftUI
 var totalWidth: CGFloat = 600
 var lineWidth: CGFloat = 2.5
 
+
+
 struct NewReservation: View {
+    
+    let newRes = Guests()
+    // TODO: Make this into a GLOBAL object
     
     @State private var fName: String = ""
     @State private var lName: String = ""
@@ -25,6 +30,15 @@ struct NewReservation: View {
     
     @State var checkin = Date()
     @State var checkout =  Date()
+    
+    func setNames(fn: String, ln: String) -> Void {
+        newRes.setMainGuestFNandLN(firstName: fn, lastName: ln)
+        print(newRes.getMainGuestFNandLN())
+    }
+    
+    func setInformation() -> Void {
+        
+    }
     
     
     
@@ -42,53 +56,74 @@ struct NewReservation: View {
             
             VStack(alignment: .center){
                 
-                
-                TextFieldComponent(sfSymbol: "person.crop.circle.fill", labelString: "First Name", input: fName)
-                TextFieldComponent(sfSymbol: "person.crop.circle.fill", labelString: "Last Name", input: lName)
-                
-                // TODO: Do the check in and checkout date picker in here.
+                HStack{
+                    Image(systemName: "person.crop.circle.fill").padding()
+                    TextField("First Name", text: $fName)
+                }.padding(5)
+                    .overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
                 
                 HStack{
-                    // Do I want to move this whole H-stack to the bottom making it
-                    DatePicker(
-                        "Check-in",
-                        selection: $checkin,
-                        displayedComponents: [.date]
-                    ).padding().datePickerStyle(.compact).overlay(RoundedRectangle(
-                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding()
-                    
-                    DatePicker(
-                        "Check-out",
-                        selection: $checkout,
-                        displayedComponents: [.date]
-                    ).padding().datePickerStyle(.compact).overlay(RoundedRectangle(
-                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding()
-                }.frame(width: totalWidth)
-                // TODO: Make the check-in time selectors in another h stack
-                
-                
-                
-                TextFieldComponent(sfSymbol: "envelope.fill", labelString: "Email Address", input: email)
-                TextFieldComponent(sfSymbol: "pin.fill", labelString: "Country/Region", input: country)
-                // country == "United States" ? TextFieldComponent(sfSymbol: "pin.full", labelString: "Zip Code", input: String(zipcode)) : nil
-                TextFieldComponent(sfSymbol: "location.circle.fill", labelString: "Address Line", input: address)
-                TextFieldComponent(sfSymbol: "phone.fill", labelString: "Phone Number", input: phoneNumber)
-                NavigationLink(destination: RoomSelection(), label: {
-                    Text("Next").font(.system(size: 24))
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(width: 200, height: 75)
-                        .background(
-                            Color.black
-                                .cornerRadius(20)
-                        .multilineTextAlignment(.leading)
-                )}).padding()
+                    Image(systemName: "person.crop.circle.fill").padding()
+                    TextField("Last Name", text: $lName)
+                }.padding(5)
+                    .overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
                 
             }
-            Spacer()
+            
+            
+            //                TextFieldComponent(sfSymbol: "person.crop.circle.fill", labelString: "First Name", input: fName)
+            //                TextFieldComponent(sfSymbol: "person.crop.circle.fill", labelString: "Last Name", input: lName)
+            //
+            //                // TODO: Do the check in and checkout date picker in here.
+            //
+            //                HStack{
+            //                    // Do I want to move this whole H-stack to the bottom making it
+            //                    DatePicker(
+            //                        "Check-in",
+            //                        selection: $checkin,
+            //                        displayedComponents: [.date]
+            //                    ).padding().datePickerStyle(.compact).overlay(RoundedRectangle(
+            //                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding()
+            //
+            //                    DatePicker(
+            //                        "Check-out",
+            //                        selection: $checkout,
+            //                        displayedComponents: [.date]
+            //                    ).padding().datePickerStyle(.compact).overlay(RoundedRectangle(
+            //                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding()
+            //                }.frame(width: totalWidth)
+            //                // TODO: Make the check-in time selectors in another h stack
+            //
+            //
+            //
+            //                TextFieldComponent(sfSymbol: "envelope.fill", labelString: "Email Address", input: email)
+            //                TextFieldComponent(sfSymbol: "pin.fill", labelString: "Country/Region", input: country)
+            //                // country == "United States" ? TextFieldComponent(sfSymbol: "pin.full", labelString: "Zip Code", input: String(zipcode)) : nil
+            //                TextFieldComponent(sfSymbol: "location.circle.fill", labelString: "Address Line", input: address)
+            //                TextFieldComponent(sfSymbol: "phone.fill", labelString: "Phone Number", input: phoneNumber)
+            NavigationLink(destination: RoomSelection(), label: {
+                Text("Next").font(.system(size: 24))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .frame(width: 200, height: 75)
+                    .background(
+                        Color.black
+                            .cornerRadius(20)
+                            .multilineTextAlignment(.leading)
+                    )}).padding()
+            Button(action: {
+                print("Hello" + fName + " how are u")
+                setNames(fn: fName, ln: lName)
+            }) {
+                Text("Hello")
+            }
         }
+        Spacer()
     }
 }
+
 
 struct TextFieldComponent: View {
     
