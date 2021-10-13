@@ -16,7 +16,7 @@ struct LanguageSelection: View {
                 .fontWeight(.medium)
             
             NavigationLink(destination: CheckIn_or_NewRoom(), label: {
-                Text("🇬🇧 English")
+                Text("English")
                     .font(.system(size: 36))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)

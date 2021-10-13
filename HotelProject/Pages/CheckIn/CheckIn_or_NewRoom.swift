@@ -12,7 +12,7 @@ struct CheckIn_or_NewRoom: View {
         VStack{
             Text("Do you have a reservation?")
                 .font(.system(size: 48))
-                .fontWeight(.medium)
+                .fontWeight(.semibold)
             
             NavigationLink(destination: NewReservation(), label: {
                 Text("I have a reservation")
@@ -23,8 +23,9 @@ struct CheckIn_or_NewRoom: View {
                     .frame(width: 400, height: 100)
                     .background(
                         Color.black
-                            .cornerRadius(20)
-            )}).padding()
+                            .cornerRadius(20))
+                    .padding()
+            })
                 
             NavigationLink(destination: NewReservation(), label: {
                 Text("I don't have a reservation")
@@ -35,9 +36,9 @@ struct CheckIn_or_NewRoom: View {
                     .frame(width: 400, height: 100)
                     .background(
                         Color.black
-                            .cornerRadius(20)
-            )}).padding()
-
+                            .cornerRadius(20))
+                    .padding()
+            })
         }
     }
 }
