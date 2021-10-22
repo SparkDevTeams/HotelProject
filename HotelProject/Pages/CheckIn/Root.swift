@@ -29,3 +29,5 @@ struct Root_Previews: PreviewProvider {
         Root().previewDevice("iPad Pro (11-inch) (3rd generation)")
     }
 }
+
+// TODO: (GLOBAL) Make all navigationLinks hidden and invisible while also taking the isActive binding boolean paramenter. Use a button to activate the navigation instead. For every view with a navigatorLink add a @State var nextPage: Bool = false. Make a function that switches the page while also doing other things such as modifying environment object.
