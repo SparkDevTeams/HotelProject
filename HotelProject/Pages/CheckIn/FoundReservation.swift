@@ -34,17 +34,19 @@ struct FoundReservation: View {
                 .padding(.bottom, 10)
             
             HStack{
-                Text("Name:")
-                    .underline()
+                Text("Name:")                    .underline()
                     .font(.system(size: 40))
                     .fontWeight(.light)
-                    .padding(.horizontal, 130)
+                    .padding(.horizontal, 60)
                     .padding(.bottom, 10)
+                    .padding(.trailing, 160)
+
                 
                 Text(name)
                     .font(.system(size: 40))
                     .fontWeight(.light)
                     .padding(.bottom, 10)
+                
             }
             HStack{
                 Text("Nights Staying:")
@@ -53,6 +55,7 @@ struct FoundReservation: View {
                     .fontWeight(.light)
                     .padding(.horizontal, 60)
                     .padding(.bottom, 10)
+                    .padding(.trailing, 20)
                 
                 Text(String(nightsStaying))
                     .font(.system(size: 40))
@@ -64,7 +67,7 @@ struct FoundReservation: View {
                     .underline()
                     .font(.system(size: 40))
                     .fontWeight(.light)
-                    .padding(.horizontal, 50)
+                    .padding(.horizontal, 60)
                 
                 Text("425987341-xxxx")
                     .font(.system(size: 40))
