@@ -121,3 +121,4 @@ struct PaymentPage_Previews: PreviewProvider {
         PaymentPage()
     }
 }
+
