@@ -8,16 +8,28 @@
 import SwiftUI
 
 struct Root: View {
+    
+    @State var navigateToNext: Bool = false
+    
+    func nextClicked() -> Void {
+        navigateToNext = !navigateToNext
+    }
+    
     var body: some View {
         NavigationView {
             // This is the root naviagtion view.
             // The navigation is controlled by this view.
             VStack(alignment: .leading){
                 Text("Welcome to Hotel {Name}!").font(.system(size: 72)).fontWeight(.bold).multilineTextAlignment(.leading)
-                NavigationLink(destination: LanguageSelection(), label: {Text("Tap here to begin Check-In or Room Reservation Process.")
-                    .font(.system(size: 36))
-                    .foregroundColor(Color.black)
-                    .multilineTextAlignment(.leading)})
+                
+                Button (action: nextClicked, label: {
+                    Text("Tap here to begin Check-In or Room Reservation Process.")
+                        .font(.system(size: 36))
+                        .foregroundColor(Color.black)
+                        .multilineTextAlignment(.leading)
+                })
+                
+                NavigationLink("Next", isActive: $navigateToNext, destination: {LanguageSelection()}).hidden()
                 
             }
         }.navigationViewStyle(StackNavigationViewStyle())

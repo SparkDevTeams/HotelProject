@@ -10,14 +10,18 @@ import SwiftUI
 struct Checkin_Fingerprint: View {
     var body: some View {
         VStack {
-            Text("One last step! Please scan your fingerprint to confirm your reservation.")
+            Text("One last step!")
                 .font(.system(size: 48))
                 .fontWeight(.semibold)
                 .padding()
             
+            Text("Please put one of your fingers on the fingerprint scanner.")
+                .font(.system(size: 42))
+                .frame(width: 700, height: 150, alignment: .center)
+            
             Text("This fingerprint will serve as your keycard to your room while providing security for our guests!")
                 .font(.system(size: 24))
-                .padding()
+                .frame(width: 700, height: 100, alignment: .center)
             
             // Add the fingerprint functions
             
@@ -26,6 +30,10 @@ struct Checkin_Fingerprint: View {
                     .resizable()
                     .frame(width: 200, height: 200, alignment: .center)
                 
+                Image(systemName: "plus.circle.fill")
+                    .resizable()
+                    .frame(width: 50, height: 50, alignment: .center)
+                
             }
             
             Text("It will start scanning once you put your finger to the scanner.")
@@ -33,7 +41,7 @@ struct Checkin_Fingerprint: View {
                 .frame(width: 325, height: 75, alignment: .center)
                 .padding()
             
-            NavigationLink(destination: {Text("Replace With actual file")}, label: {
+            NavigationLink(destination: LastPage(), label: {
                 Text("Check In!")
                     .font(.system(size: 36))
                     .fontWeight(.semibold)

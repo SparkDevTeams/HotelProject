@@ -32,7 +32,7 @@ struct LastPage: View {
                                 .padding()
                         })
                         
-                        NavigationLink("Finish", isActive: $navigateToNext, destination: {Checkin_Fingerprint()}).hidden()
+                        NavigationLink("Finish", isActive: $navigateToNext, destination: {Root()}).hidden()
             // On the navigation press, make sure to discard the data for the object. !!ONLY FOR THE NEW RESERVATION PAGE not the check in beause all the information is there already.
         }
         

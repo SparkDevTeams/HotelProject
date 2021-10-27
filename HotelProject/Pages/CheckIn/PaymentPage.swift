@@ -11,7 +11,7 @@ import SwiftUI
 
 struct PaymentPage: View {
     
-    @State var ifComplete: Bool = false
+    @State var navigateToNext: Bool = false
     @State var amountOfNights: String = ""
     @State var email: String = ""
     @State var confirmEmail: String = ""
@@ -22,14 +22,16 @@ struct PaymentPage: View {
     @State var zipCode: String = ""
     @State var expirationDate = Date()
     
+    func nextClicked() -> Void {
+        navigateToNext = !navigateToNext
+    }
+    
     var body: some View {
         VStack{
             
             PaymentPageTextfieldView(amountOfNights: $amountOfNights, email: $email, confirmEmail: $confirmEmail, cardNumber: $cardNumber, CVC: $CVC, cardholderName: $cardholderName, locationName: $locationName, zipCode: $zipCode, expirationDate: $expirationDate)
             
-            Button {
-                ifComplete = true
-            } label: {
+            Button (action: nextClicked, label: {
                 Text("Next")
                     .font(.system(size: 24))
                     .fontWeight(.semibold)
@@ -39,10 +41,9 @@ struct PaymentPage: View {
                         Color.black
                             .cornerRadius(20))
                     .padding()
-            }
-
+            })
             
-        }
+            NavigationLink("Next", isActive: $navigateToNext, destination: {Checkin_Fingerprint()}).hidden()
     }
 }
 
@@ -122,3 +123,4 @@ struct PaymentPage_Previews: PreviewProvider {
     }
 }
 
+}
