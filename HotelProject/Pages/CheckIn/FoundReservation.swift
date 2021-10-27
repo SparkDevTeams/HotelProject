@@ -13,6 +13,7 @@ struct FoundReservation: View {
     @State private var confPin = ""
     @State var confirmationID: String = ""
     @State var codeMatches = false
+    @State var navigateToNext: Bool = false
 
     
     var body: some View {
@@ -97,23 +98,27 @@ struct FoundReservation: View {
             
             HStack {
                 Spacer()
-                Button {
-                    codeMatches = true
-                } label: {
-                    Text("Next")
-                        .font(.system(size: 24))
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(width: 300, height: 100)
-                        .background(
-                            Color.black
-                                .cornerRadius(20))
-                        .padding(.vertical, 30)
-            }
+                Button (action: nextClicked, label: {
+                                Text("Next")
+                                    .font(.system(size: 24))
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 300, height: 100)
+                                    .background(
+                                        Color.black
+                                            .cornerRadius(20))
+                                    .padding()
+                            })
+                            
+                            NavigationLink("Next", isActive: $navigateToNext, destination: {Checkin_Fingerprint()}).hidden()
                 Spacer()
             }
         }
     }
+    
+    func nextClicked() -> Void {
+            navigateToNext = !navigateToNext
+        }
 }
 
 
