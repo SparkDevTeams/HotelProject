@@ -14,13 +14,13 @@ struct CheckIn_or_NewRoom: View {
                 .font(.system(size: 48))
                 .fontWeight(.semibold)
             
-            NavigationLink(destination: NewReservation(), label: {
+            NavigationLink(destination: ReservationSearch(), label: {
                 Text("I have a reservation")
                     .font(.system(size: 36))
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .frame(width: 400, height: 100)
+                    .frame(width: 400, height: 130)
                     .background(
                         Color.black
                             .cornerRadius(20))
@@ -33,7 +33,7 @@ struct CheckIn_or_NewRoom: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .frame(width: 400, height: 100)
+                    .frame(width: 400, height: 130)
                     .background(
                         Color.black
                             .cornerRadius(20))

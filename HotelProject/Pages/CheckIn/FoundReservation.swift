@@ -17,6 +17,7 @@ struct FoundReservation: View {
     
     var body: some View {
         VStack(alignment: .leading){
+            
             Text("We have found your reservation")
                 .font(.system(size: 60))
                 .fontWeight(.light)
