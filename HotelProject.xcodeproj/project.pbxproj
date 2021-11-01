@@ -18,6 +18,7 @@
 		ACCE7F5F270A2C50004041B6 /* CheckIn_or_NewRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE7F5E270A2C50004041B6 /* CheckIn_or_NewRoom.swift */; };
 		ACEE232F27050BB4001F221B /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE232E27050BB4001F221B /* Root.swift */; };
 		ACEE233327050D17001F221B /* LanguageSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE233227050D17001F221B /* LanguageSelection.swift */; };
+		E207DA772730329700A7F75C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E207DA762730329700A7F75C /* Utilities.swift */; };
 		E22DE0D727050012003D5E25 /* HotelProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0D627050012003D5E25 /* HotelProjectApp.swift */; };
 		E22DE0D927050012003D5E25 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0D827050012003D5E25 /* ContentView.swift */; };
 		E22DE0DB27050014003D5E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22DE0DA27050014003D5E25 /* Assets.xcassets */; };
@@ -28,7 +29,6 @@
 		E22DE0F727050014003D5E25 /* HotelProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0F627050014003D5E25 /* HotelProjectUITests.swift */; };
 		E22DE0F927050014003D5E25 /* HotelProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0F827050014003D5E25 /* HotelProjectUITestsLaunchTests.swift */; };
 		E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE10627061D04003D5E25 /* RoomSelection.swift */; };
-		E25E130A270E5002005A9496 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25E1309270E5002005A9496 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +60,7 @@
 		ACCE7F5E270A2C50004041B6 /* CheckIn_or_NewRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIn_or_NewRoom.swift; sourceTree = "<group>"; };
 		ACEE232E27050BB4001F221B /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		ACEE233227050D17001F221B /* LanguageSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelection.swift; sourceTree = "<group>"; };
+		E207DA762730329700A7F75C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		E22DE0D327050012003D5E25 /* HotelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22DE0D627050012003D5E25 /* HotelProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectApp.swift; sourceTree = "<group>"; };
 		E22DE0D827050012003D5E25 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		E22DE0F627050014003D5E25 /* HotelProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectUITests.swift; sourceTree = "<group>"; };
 		E22DE0F827050014003D5E25 /* HotelProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E22DE10627061D04003D5E25 /* RoomSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSelection.swift; sourceTree = "<group>"; };
-		E25E1309270E5002005A9496 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				E22DE10627061D04003D5E25 /* RoomSelection.swift */,
-				E25E1309270E5002005A9496 /* ViewController.swift */,
+				E207DA762730329700A7F75C /* Utilities.swift */,
 			);
 			path = "Room Selection";
 			sourceTree = "<group>";
@@ -340,10 +340,10 @@
 				E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */,
 				630D3903270E4FA400BD76D3 /* PaymentPage.swift in Sources */,
 				AC439FBB270E3FC1004185CE /* Checkin_Fingerprint.swift in Sources */,
+				E207DA772730329700A7F75C /* Utilities.swift in Sources */,
 				AC8AD7702705303800111B31 /* NewReservation.swift in Sources */,
 				E22DE0E027050014003D5E25 /* Persistence.swift in Sources */,
 				E22DE0D927050012003D5E25 /* ContentView.swift in Sources */,
-				E25E130A270E5002005A9496 /* ViewController.swift in Sources */,
 				E22DE0D727050012003D5E25 /* HotelProjectApp.swift in Sources */,
 				AC439FB9270E3EFD004185CE /* FoundReservation.swift in Sources */,
 				ACCE7F5F270A2C50004041B6 /* CheckIn_or_NewRoom.swift in Sources */,
@@ -511,7 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HotelProject/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6TVR966RUH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -541,7 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HotelProject/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6TVR966RUH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
