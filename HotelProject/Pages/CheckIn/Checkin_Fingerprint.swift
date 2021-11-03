@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct Checkin_Fingerprint: View {
+    
+    @State var navigateToNext: Bool = false
+    
+    func nextClicked() -> Void {
+        navigateToNext = !navigateToNext
+    }
+    
     var body: some View {
         VStack {
             Text("One last step!")
@@ -41,18 +48,21 @@ struct Checkin_Fingerprint: View {
                 .frame(width: 325, height: 75, alignment: .center)
                 .padding()
             
-            NavigationLink(destination: LastPage(), label: {
-                Text("Check In!")
-                    .font(.system(size: 36))
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 200, height: 75)
-                    .background(
-                        Color.black
-                            .cornerRadius(20))
-                    .padding()
-            })
+            ZStack{
+                Button (action: nextClicked, label: {
+                    Text("Check In!")
+                        .font(.system(size: 36))
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 200, height: 75)
+                        .background(
+                            Color.black
+                                .cornerRadius(20))
+                        .padding()
+                })
+                
+                NavigationLink("Next", isActive: $navigateToNext, destination: {LastPage()}).hidden()
+            }
         }
     }
 }

@@ -99,18 +99,19 @@ struct FoundReservation: View {
             HStack {
                 Spacer()
                 Button (action: nextClicked, label: {
-                                Text("Next")
-                                    .font(.system(size: 24))
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.white)
-                                    .frame(width: 300, height: 100)
-                                    .background(
-                                        Color.black
-                                            .cornerRadius(20))
-                                    .padding()
-                            })
-                            
-                            NavigationLink("Next", isActive: $navigateToNext, destination: {Checkin_Fingerprint()}).hidden()
+                    Text("Next")
+                        .font(.system(size: 24))
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 100)
+                        .background(
+                            Color.black
+                                .cornerRadius(20))
+                        .padding()
+                })
+                
+                NavigationLink("Next", isActive: $navigateToNext, destination: {Checkin_Fingerprint()}).hidden()
+                
                 Spacer()
             }
         }
