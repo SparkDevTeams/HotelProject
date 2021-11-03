@@ -10,6 +10,7 @@
 		279ADDB22714E92B0043B5FD /* LanguageNotSupported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279ADDB12714E92B0043B5FD /* LanguageNotSupported.swift */; };
 		630D3903270E4FA400BD76D3 /* PaymentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630D3902270E4FA400BD76D3 /* PaymentPage.swift */; };
 		9723DC7A27177E1F00321DE6 /* LastPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9723DC7927177E1F00321DE6 /* LastPage.swift */; };
+		97E62B8227332F8400A13B22 /* NewReservationStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E62B8127332F8400A13B22 /* NewReservationStruct.swift */; };
 		AC439FB9270E3EFD004185CE /* FoundReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC439FB8270E3EFD004185CE /* FoundReservation.swift */; };
 		AC439FBB270E3FC1004185CE /* Checkin_Fingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */; };
 		AC44FD0927074C6F002B83C3 /* ReservationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */; };
@@ -52,6 +53,7 @@
 		279ADDB12714E92B0043B5FD /* LanguageNotSupported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageNotSupported.swift; sourceTree = "<group>"; };
 		630D3902270E4FA400BD76D3 /* PaymentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPage.swift; sourceTree = "<group>"; };
 		9723DC7927177E1F00321DE6 /* LastPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPage.swift; sourceTree = "<group>"; };
+		97E62B8127332F8400A13B22 /* NewReservationStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReservationStruct.swift; sourceTree = "<group>"; };
 		AC439FB8270E3EFD004185CE /* FoundReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundReservation.swift; sourceTree = "<group>"; };
 		AC439FBA270E3FC1004185CE /* Checkin_Fingerprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin_Fingerprint.swift; sourceTree = "<group>"; };
 		AC44FD0827074C6F002B83C3 /* ReservationSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationSearch.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				E22DE0E127050014003D5E25 /* HotelProject.xcdatamodeld */,
 				E22DE0DC27050014003D5E25 /* Preview Content */,
 				AC885E59270BA3F600A5D8DA /* Styles.swift */,
+				97E62B8127332F8400A13B22 /* NewReservationStruct.swift */,
 			);
 			path = HotelProject;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				279ADDB22714E92B0043B5FD /* LanguageNotSupported.swift in Sources */,
+				97E62B8227332F8400A13B22 /* NewReservationStruct.swift in Sources */,
 				AC885E5A270BA3F600A5D8DA /* Styles.swift in Sources */,
 				E22DE0E327050014003D5E25 /* HotelProject.xcdatamodeld in Sources */,
 				E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */,
