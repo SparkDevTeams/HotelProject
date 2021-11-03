@@ -14,6 +14,7 @@ var lineWidth: CGFloat = 2.5
 
 struct NewReservation: View {
     
+    @State var navigateToNext: Bool = false
     @State private var fName: String = ""
     @State private var lName: String = ""
     @State private var email: String = ""
@@ -26,7 +27,9 @@ struct NewReservation: View {
     @State var checkin = Date()
     @State var checkout =  Date()
     
-    
+    func nextClicked() -> Void {
+        navigateToNext = !navigateToNext
+    }
     
     var body: some View {
         
@@ -73,17 +76,21 @@ struct NewReservation: View {
                 // country == "United States" ? TextFieldComponent(sfSymbol: "pin.full", labelString: "Zip Code", input: String(zipcode)) : nil
                 TextFieldComponent(sfSymbol: "location.circle.fill", labelString: "Address Line", input: address)
                 TextFieldComponent(sfSymbol: "phone.fill", labelString: "Phone Number", input: phoneNumber)
-                NavigationLink(destination: RoomSelection(), label: {
-                    Text("Next").font(.system(size: 24))
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .frame(width: 200, height: 75)
-                        .background(
-                            Color.black
-                                .cornerRadius(20)
-                        .multilineTextAlignment(.leading)
-                )}).padding()
-                
+                ZStack{
+                    Button (action: nextClicked, label: {
+                        Text("Next")
+                            .font(.system(size: 24))
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 75)
+                            .background(
+                                Color.black
+                                    .cornerRadius(20))
+                            .padding()
+                    })
+                    
+                    NavigationLink("Next", isActive: $navigateToNext, destination: {RoomSelection()}).hidden()
+                }
             }
             Spacer()
         }

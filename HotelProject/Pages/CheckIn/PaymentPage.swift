@@ -31,19 +31,21 @@ struct PaymentPage: View {
             
             PaymentPageTextfieldView(amountOfNights: $amountOfNights, email: $email, confirmEmail: $confirmEmail, cardNumber: $cardNumber, CVC: $CVC, cardholderName: $cardholderName, locationName: $locationName, zipCode: $zipCode, expirationDate: $expirationDate)
             
-            Button (action: nextClicked, label: {
-                Text("Next")
-                    .font(.system(size: 24))
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(width: 300, height: 100)
-                    .background(
-                        Color.black
-                            .cornerRadius(20))
-                    .padding()
-            })
-            
-            NavigationLink("Next", isActive: $navigateToNext, destination: {Checkin_Fingerprint()}).hidden()
+            ZStack{
+                Button (action: nextClicked, label: {
+                    Text("Next")
+                        .font(.system(size: 24))
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 100)
+                        .background(
+                            Color.black
+                                .cornerRadius(20))
+                        .padding()
+                })
+                
+                NavigationLink("Next", isActive: $navigateToNext, destination: {Checkin_Fingerprint()}).hidden()
+            }
     }
 }
 
