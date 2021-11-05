@@ -9,6 +9,13 @@ import SwiftUI
 
 struct CheckIn_or_NewRoom: View {
     
+    // this is the new reservation object we are making that is only global to the nextClicked reservation branch
+    
+    // TODO: add the environment object to each page of this branch.
+    // TODO: add another class called existing reservation and create teh class.
+    
+    @StateObject var newReservation = NewGuests()
+    
     @State var navigateToReservationSearch: Bool = false
     @State var navigateToNewReservation: Bool = false
     
@@ -57,7 +64,7 @@ struct CheckIn_or_NewRoom: View {
                 
                 NavigationLink("Next", isActive: $navigateToNewReservation, destination: {NewReservation()}).hidden()
             }
-        }
+        }.environmentObject(newReservation)
     }
 }
 

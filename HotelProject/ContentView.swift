@@ -11,6 +11,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -19,7 +20,6 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
-        Root()
     }
 
     private func addItem() {

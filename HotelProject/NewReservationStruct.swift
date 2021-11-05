@@ -49,6 +49,7 @@ class NewGuests: ObservableObject {
     
     func writeToDatabase() -> Void {
         // TODO: use the functions to write to the database
+        // use MongoDB methods to write to database.
     }
     
 }
