@@ -8,7 +8,6 @@
 import SwiftUI
 let backgroundColor = Color("secondary")
 
-
 struct RoomSelection: View {
     @State var show = false
     @State var show2 = false
@@ -28,10 +27,16 @@ struct RoomSelection: View {
 //        }
         
         ScrollView {
+            Text("Testing")
             VStack {
                 IndividualRoom(show: $show)
+                    .frame(width: show ? screen.width : 800, height: show ? screen.height : 500)
+                    .edgesIgnoringSafeArea(.bottom)
+                    .padding(.bottom, 30)
+                IndividualRoom(show: $show2)
             }
             .frame(width: screen.width, height: screen.height)
+            
         }
         
     }
@@ -48,7 +53,7 @@ struct IndividualRoom: View {
 
     var body: some View {
         ZStack(alignment: .top ) {
-            VStack(alignment: .leading, spacing: 30.0) {
+            VStack(alignment: .center, spacing: 30.0) {
                 Text("Testing this out this room is very nice")
                     .font(.system(size: 24, weight: .medium))
                 Text("About this Room")
@@ -58,6 +63,18 @@ struct IndividualRoom: View {
 
                 Text("This is a very nice room it comes with blabablablabla, it comes with a lot of amenities. This is a very nice room it comes with blabablablabla, it comes with a lot of amenities.This is a very nice room it comes with blabablablabla, it comes with a lot of amenities. This is a very nice room it comes with blabablablabla, it comes with a lot of amenities")
                     .font(.system(size: 24, weight: .medium))
+                NavigationLink(destination: PaymentPage(), label: {
+                    Text("Select Room")
+                        .padding(.horizontal, 40)
+                        .font(.system(size: 24))
+                        .font(.system(size: 24, weight: .medium))
+                        .foregroundColor(.white)
+                        .frame(width: 200, height: 75)
+                        .background(
+                            Color.black
+                                .cornerRadius(20)
+                        .multilineTextAlignment(.leading)
+                )}).padding()
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)
@@ -66,7 +83,7 @@ struct IndividualRoom: View {
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .opacity(show ? 1 : 0)
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.top)
             
 
             VStack {
@@ -106,7 +123,7 @@ struct IndividualRoom: View {
                     .cornerRadius(30)
                     .frame(maxWidth: .infinity)
                     .frame(width: 550, alignment: .top)
-
+                    
             }
             .padding(show ? 30 : 20)
             .padding(.top, show ? 30 : 0)
@@ -121,7 +138,7 @@ struct IndividualRoom: View {
 
         }
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
-        .edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

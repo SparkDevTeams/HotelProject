@@ -48,7 +48,7 @@ struct NewReservation: View {
                 
                 // TODO: Do the check in and checkout date picker in here.
                 
-                HStack{
+                HStack {
                     // Do I want to move this whole H-stack to the bottom making it
                     DatePicker(
                         "Check-in",

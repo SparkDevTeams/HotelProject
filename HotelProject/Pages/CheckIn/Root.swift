@@ -30,6 +30,7 @@ struct Root: View {
                 })
                 
                 NavigationLink("Next", isActive: $navigateToNext, destination: {LanguageSelection()}).hidden()
+                    .navigationBarBackButtonHidden(true)
                 
             }
         }.navigationViewStyle(StackNavigationViewStyle())
