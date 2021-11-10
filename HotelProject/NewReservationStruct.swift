@@ -52,4 +52,8 @@ class NewGuests: ObservableObject {
         // use MongoDB methods to write to database.
     }
     
+    func resetData() -> Void {
+        // TODO: Make function to wipe the data from the object
+    }
+    
 }

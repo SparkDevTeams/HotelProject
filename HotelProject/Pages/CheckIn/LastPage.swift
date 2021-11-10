@@ -37,6 +37,9 @@ struct LastPage: View {
                 NavigationLink("Finish", isActive: $navigateToNext, destination: {Root()}).hidden()
             }
             // On the navigation press, make sure to discard the data for the object. !!ONLY FOR THE NEW RESERVATION PAGE not the check in beause all the information is there already.
+            
+            // TODO: Make a function that resets ALL the data. Preferably in the struct file
+            
         }
         
     }
