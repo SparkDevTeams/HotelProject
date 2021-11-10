@@ -8,38 +8,63 @@
 import SwiftUI
 
 struct CheckIn_or_NewRoom: View {
+    
+    // this is the new reservation object we are making that is only global to the nextClicked reservation branch
+    
+    // TODO: add the environment object to each page of this branch.
+    // TODO: add another class called existing reservation and create teh class.
+    
+    @StateObject var newReservation = NewGuests()
+    
+    @State var navigateToReservationSearch: Bool = false
+    @State var navigateToNewReservation: Bool = false
+    
+    func nextClickedReservation() -> Void {
+        navigateToReservationSearch = !navigateToReservationSearch
+    }
+    
+    func nextClickedNoReservation() -> Void {
+        navigateToNewReservation = !navigateToNewReservation
+    }
+    
     var body: some View {
         VStack{
             Text("Do you have a reservation?")
                 .font(.system(size: 48))
                 .fontWeight(.semibold)
             
-            NavigationLink(destination: ReservationSearch(), label: {
-                Text("I have a reservation")
-                    .font(.system(size: 36))
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 400, height: 130)
-                    .background(
-                        Color.black
-                            .cornerRadius(20))
-                    .padding()
-            })
+            ZStack{
+                Button (action: nextClickedReservation, label: {
+                    Text("I have a reservation")
+                        .font(.system(size: 36))
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 400, height: 130)
+                        .background(
+                            Color.black
+                                .cornerRadius(20))
+                        .padding()
+                })
                 
-            NavigationLink(destination: NewReservation(), label: {
-                Text("I don't have a reservation")
-                    .font(.system(size: 36))
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .frame(width: 400, height: 130)
-                    .background(
-                        Color.black
-                            .cornerRadius(20))
-                    .padding()
-            })
-        }
+                NavigationLink("Next", isActive: $navigateToReservationSearch, destination: {ReservationSearch()}).hidden()
+            }
+            
+            ZStack{
+                Button (action: nextClickedNoReservation, label: {
+                    Text("I don't have a reservation")
+                        .font(.system(size: 36))
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 400, height: 130)
+                        .background(
+                            Color.black
+                                .cornerRadius(20))
+                        .padding()
+                })
+                
+                NavigationLink("Next", isActive: $navigateToNewReservation, destination: {NewReservation()}).hidden()
+            }
+        }.environmentObject(newReservation)
     }
 }
 

@@ -31,20 +31,21 @@ struct ReservationSearch: View {
                 .font(.system(size: 24))
                 .padding(.horizontal, 100)
             
-            Button (action: nextClicked, label: {
-                            Text("Next")
-                                .font(.system(size: 24))
-                                .fontWeight(.semibold)
-                                .foregroundColor(.white)
-                                .frame(width: 300, height: 100)
-                                .background(
-                                    Color.black
-                                        .cornerRadius(20))
-                                .padding()
-                        })
-            
-                        NavigationLink("Next", isActive: $navigateToNext, destination: {FoundReservation()}).hidden()
-            
+            ZStack{
+                Button (action: nextClicked, label: {
+                    Text("Search")
+                        .font(.system(size: 24))
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(width: 300, height: 100)
+                        .background(
+                            Color.black
+                                .cornerRadius(20))
+                        .padding()
+                })
+                
+                NavigationLink("Next", isActive: $navigateToNext, destination: {FoundReservation()}).hidden()
+            }
             
             
             /*
