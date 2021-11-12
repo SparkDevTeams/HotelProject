@@ -9,10 +9,13 @@ import Foundation
 
 class NewGuests: ObservableObject {
     
-    @Published var mainGuestFN: String = ""
-    @Published var mainGuestLN: String = ""
-    @Published var mainGuestAddress: String = ""
-    @Published var mainGuestZip: String = ""
+    @Published var mainGuestFN = ""
+    @Published var mainGuestLN = ""
+    @Published var mainGuestAddress = ""
+    @Published var mainGuestZip = ""
+    @Published var mainGuestEmailAddress = ""
+    @Published var countryRegion = ""
+    @Published var phoneNumber = ""
     
     // Below are the fields for the other guests
     
@@ -32,6 +35,15 @@ class NewGuests: ObservableObject {
     func setMainGuestZip(zip: String) -> Void {
         self.mainGuestZip = zip
     }
+    func setEmailAddress(email: String) -> Void {
+        self.mainGuestEmailAddress = email
+    }
+    func setCountry(country: String) -> Void {
+        self.countryRegion = country
+    }
+    func setPhoneNumber(phone: String) -> Void {
+        self.phoneNumber = phone
+    }
    
     // below are the getters
     func getMainGuestFN() -> String {
@@ -45,6 +57,15 @@ class NewGuests: ObservableObject {
     }
     func getMainGuestZip() -> String {
         return self.mainGuestZip
+    }
+    func getEmailAddress() -> String {
+        return self.mainGuestEmailAddress
+    }
+    func getCountry() -> String {
+        return self.countryRegion
+    }
+    func getPhoneNumber() -> String {
+        return self.phoneNumber
     }
     
     func writeToDatabase() -> Void {

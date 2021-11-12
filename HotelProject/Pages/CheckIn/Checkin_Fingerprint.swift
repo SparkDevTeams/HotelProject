@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Checkin_Fingerprint: View {
     
+    @EnvironmentObject var newReservation: NewGuests
+    
     @State var navigateToNext: Bool = false
     
     func nextClicked() -> Void {

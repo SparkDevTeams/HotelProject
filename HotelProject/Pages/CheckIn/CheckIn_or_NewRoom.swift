@@ -62,9 +62,9 @@ struct CheckIn_or_NewRoom: View {
                         .padding()
                 })
                 
-                NavigationLink("Next", isActive: $navigateToNewReservation, destination: {NewReservation()}).hidden()
+                NavigationLink("Next", isActive: $navigateToNewReservation, destination: {NewReservation().environmentObject(newReservation)}).hidden()
             }
-        }.environmentObject(newReservation)
+        }
     }
 }
 

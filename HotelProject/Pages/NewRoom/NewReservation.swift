@@ -14,6 +14,8 @@ var lineWidth: CGFloat = 2.5
 
 struct NewReservation: View {
     
+    @EnvironmentObject var newReservation: NewGuests
+    
     @State var navigateToNext: Bool = false
     @State private var fName: String = ""
     @State private var lName: String = ""
@@ -28,7 +30,20 @@ struct NewReservation: View {
     @State var checkout =  Date()
     
     func nextClicked() -> Void {
+        
+        newReservation.setMainGuestFN(FN: fName)
+        newReservation.setMainGuestLN(LN: lName)
+        newReservation.setEmailAddress(email: email)
+        newReservation.setCountry(country: country)
+        newReservation.setMainGuestAddress(ad: address)
+        newReservation.setPhoneNumber(phone: phoneNumber)
+        
+        print("Hello" + newReservation.getMainGuestFN())
+        
         navigateToNext = !navigateToNext
+        
+        // We need to save the data
+        
     }
     
     var body: some View {
@@ -45,9 +60,22 @@ struct NewReservation: View {
             
             VStack(alignment: .center){
                 
+                // FN, LN, EMAIL, COUNTRY, ADDY, Phone
+                // "person.crop.circle.fill", "envelope.fill", "pin.fill", "location.circle.fill", "phone.fill"
                 
-                TextFieldComponent(sfSymbol: "person.crop.circle.fill", labelString: "First Name", input: fName)
-                TextFieldComponent(sfSymbol: "person.crop.circle.fill", labelString: "Last Name", input: lName)
+                HStack{
+                    Image(systemName: "person.crop.circle.fill").padding()
+                    TextField("First Name", text: $fName)
+                }.padding(5)
+                    .overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
+                
+                HStack{
+                    Image(systemName: "person.crop.circle.fill").padding()
+                    TextField("Last Name", text: $lName)
+                }.padding(5)
+                    .overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
                 
                 // TODO: Do the check in and checkout date picker in here.
                 
@@ -69,13 +97,34 @@ struct NewReservation: View {
                 }.frame(width: totalWidth)
                 // TODO: Make the check-in time selectors in another h stack
                 
+                HStack{
+                    Image(systemName: "envelope.fill").padding()
+                    TextField("Email Address", text: $email)
+                }.padding(5)
+                    .overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
                 
+                HStack{
+                    Image(systemName: "pin.fill").padding()
+                    TextField("Country/Region", text: $country)
+                }.padding(5)
+                    .overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
                 
-                TextFieldComponent(sfSymbol: "envelope.fill", labelString: "Email Address", input: email)
-                TextFieldComponent(sfSymbol: "pin.fill", labelString: "Country/Region", input: country)
-                // country == "United States" ? TextFieldComponent(sfSymbol: "pin.full", labelString: "Zip Code", input: String(zipcode)) : nil
-                TextFieldComponent(sfSymbol: "location.circle.fill", labelString: "Address Line", input: address)
-                TextFieldComponent(sfSymbol: "phone.fill", labelString: "Phone Number", input: phoneNumber)
+                HStack{
+                    Image(systemName: "location.circle.fill").padding()
+                    TextField("Address", text: $address)
+                }.padding(5)
+                    .overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
+                
+                HStack{
+                    Image(systemName: "phone.fill").padding()
+                    TextField("Phone Number", text: $phoneNumber)
+                }.padding(5)
+                    .overlay(RoundedRectangle(
+                        cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
+                
                 ZStack{
                     Button (action: nextClicked, label: {
                         Text("Next")

@@ -11,6 +11,8 @@ import SwiftUI
 
 struct PaymentPage: View {
     
+    @EnvironmentObject var newReservation: NewGuests
+    
     @State var navigateToNext: Bool = false
     @State var amountOfNights: String = ""
     @State var email: String = ""

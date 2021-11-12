@@ -9,6 +9,9 @@ import SwiftUI
 let backgroundColor = Color("secondary")
 
 struct RoomSelection: View {
+    
+    @EnvironmentObject var newReservation: NewGuests
+    
     @State var show = false
     @State var show2 = false
     var body: some View {
