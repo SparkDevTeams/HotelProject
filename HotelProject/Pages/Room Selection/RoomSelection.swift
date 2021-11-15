@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
+
 let backgroundColor = Color("secondary")
+
 
 struct RoomSelection: View {
     
@@ -16,31 +18,54 @@ struct RoomSelection: View {
     @State var show2 = false
     var body: some View {
         
-    // Not working for some reason
-//        ScrollView {
-//            VStack(spacing: 30) {
-//                IndividualRoom(show : $show)
-//                GeometryReader { geometry in
-//                    IndividualRoom(show: self.$show2)
-//                }
-//                .frame(height: 500)
-//                .frame(maxWidth: .infinity)
-//            }
-//            .frame(width: screen.width)
-//        }
+        // Not working for some reason
+    //        ScrollView {
+    //            VStack(spacing: 30) {
+    //                IndividualRoom(show : $show)
+    //                GeometryReader { geometry in
+    //                    IndividualRoom(show: self.$show2)
+    //                }
+    //                .frame(height: 500)
+    //                .frame(maxWidth: .infinity)
+    //            }
+    //            .frame(width: screen.width)
+    //        }
+            
+    //        ScrollView {
+    //            Text("Testing")
+    //            VStack {
+    //                IndividualRoom(show: $show)
+    //                    .frame(width: show ? screen.width : 800, height: show ? screen.height : 500)
+    //                    .edgesIgnoringSafeArea(.bottom)
+    //                    .padding(.bottom, 30)
+    //                IndividualRoom(show: $show2)
+    //            }
+    //            .frame(width: screen.width, height: screen.height)
+    //
+    //        }
         
         ScrollView {
-            Text("Testing")
-            VStack {
-                IndividualRoom(show: $show)
-                    .frame(width: show ? screen.width : 800, height: show ? screen.height : 500)
-                    .edgesIgnoringSafeArea(.bottom)
-                    .padding(.bottom, 30)
-                IndividualRoom(show: $show2)
-            }
-            .frame(width: screen.width, height: screen.height)
+            VStack(spacing: 30) {
+                
+                    GeometryReader { geometry in
+                        IndividualRoom(show: self.$show)
+                            .offset(y: self.show ? -geometry.frame(in: .global).minY: 0)
+                    }
+                    .frame(height: show ? screen.height: 500)
+                    .frame(maxWidth: show ? .infinity : screen.width  - 200)
+                
+                    GeometryReader { geometry in
+                        IndividualRoom(show: self.$show2)
+                            .offset(y: self.show2 ? -geometry.frame(in: .global).minY: 0)
+                    }
+                    .frame(height: show2 ? screen.height: 500)
+                    .frame(maxWidth: show2 ? .infinity : screen.width  - 200)
+                }
+                .frame(width: screen.width)
             
         }
+        
+        
         
     }
 }
