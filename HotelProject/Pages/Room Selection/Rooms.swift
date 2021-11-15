@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct Rooms: View {
+    @State var show = false
+    
     var body: some View {
-        Text("Hello, World!")
+        
+        
+        //To Change the room you want to view just change FirstRoom | SecondRoom | ThirdRoom | FourthRoom
+        
+        GeometryReader { geometry in
+            FirstRoom(show: self.$show)
+                .offset(y: self.show ? -geometry.frame(in: .global).minY: 0)
+        }
+        .frame(height: show ? screen.height: 500)
+        .frame(maxWidth: show ? .infinity : screen.width  - 200)
+        .padding(.bottom, 40)
+        
     }
 }
 
@@ -54,7 +67,7 @@ struct FirstRoom: View {
                                 .cornerRadius(20)
                         .multilineTextAlignment(.leading)
                 )})
-                NavigationLink("", destination: PaymentPage().environmentObject(newReservation), isActive: $nextPage)
+                NavigationLink("", destination: PaymentPage(), isActive: $nextPage)
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)
@@ -155,7 +168,7 @@ struct SecondRoom: View {
                                 .cornerRadius(20)
                         .multilineTextAlignment(.leading)
                 )})
-                NavigationLink("", destination: PaymentPage().environmentObject(newReservation), isActive: $nextPage)
+                NavigationLink("", destination: PaymentPage(), isActive: $nextPage)
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)
@@ -256,7 +269,7 @@ struct ThirdRoom: View {
                                 .cornerRadius(20)
                         .multilineTextAlignment(.leading)
                 )})
-                NavigationLink("", destination: PaymentPage().environmentObject(newReservation), isActive: $nextPage)
+                NavigationLink("", destination: PaymentPage(), isActive: $nextPage)
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)
@@ -357,7 +370,7 @@ struct FourthRoom: View {
                                 .cornerRadius(20)
                         .multilineTextAlignment(.leading)
                 )})
-                NavigationLink("", destination: PaymentPage().environmentObject(newReservation), isActive: $nextPage)
+                NavigationLink("", destination: PaymentPage(), isActive: $nextPage)
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)

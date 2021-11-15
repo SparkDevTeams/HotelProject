@@ -19,10 +19,12 @@ struct RoomSelection: View {
     @State var show = false
     @State var show2 = false
     @State var show3 = false
-    
+    @State var show4 = false
     var body: some View {
         
         ScrollView {
+            Text("Select Your Room")
+                .padding(30)
             VStack(spacing: 30) {
                 
                     GeometryReader { geometry in
@@ -47,6 +49,16 @@ struct RoomSelection: View {
                     }
                     .frame(height: show3 ? screen.height: 500)
                     .frame(maxWidth: show3 ? .infinity : screen.width  - 200)
+                    .padding(.bottom, 40)
+                
+                    // Fourth Room
+                    GeometryReader { geometry in
+                        FourthRoom(show: self.$show4)
+                            .offset(y: self.show4 ? -geometry.frame(in: .global).minY: 0)
+                    }
+                    .frame(height: show4 ? screen.height: 500)
+                    .frame(maxWidth: show4 ? .infinity : screen.width  - 200)
+                    .padding(.bottom, 40)
                 }
                 .frame(width: screen.width)
             
