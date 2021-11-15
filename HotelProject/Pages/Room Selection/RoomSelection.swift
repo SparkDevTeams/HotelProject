@@ -53,7 +53,13 @@ struct RoomSelection_Previews: PreviewProvider {
 
 struct IndividualRoom: View {
     @Binding var show: Bool
+    
+    @State var nextPage: Bool = false
 
+    func navNext() -> Void {
+        nextPage = !nextPage
+    }
+    
     var body: some View {
         ZStack(alignment: .top ) {
             VStack(alignment: .center, spacing: 30.0) {
@@ -66,9 +72,7 @@ struct IndividualRoom: View {
 
                 Text("This is a very nice room it comes with blabablablabla, it comes with a lot of amenities. This is a very nice room it comes with blabablablabla, it comes with a lot of amenities.This is a very nice room it comes with blabablablabla, it comes with a lot of amenities. This is a very nice room it comes with blabablablabla, it comes with a lot of amenities")
                     .font(.system(size: 24, weight: .medium))
-                NavigationLink(destination: PaymentPage(), label: {
-                    Text("Select Room")
-                        .padding(.horizontal, 40)
+                Button(action: navNext, label: {Text("Select This room!").padding(.horizontal, 40)
                         .font(.system(size: 24))
                         .font(.system(size: 24, weight: .medium))
                         .foregroundColor(.white)
@@ -77,7 +81,8 @@ struct IndividualRoom: View {
                             Color.black
                                 .cornerRadius(20)
                         .multilineTextAlignment(.leading)
-                )}).padding()
+                )})
+                NavigationLink("", destination: PaymentPage(), isActive: $nextPage)
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)
