@@ -30,6 +30,7 @@
 		E22DE0F727050014003D5E25 /* HotelProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0F627050014003D5E25 /* HotelProjectUITests.swift */; };
 		E22DE0F927050014003D5E25 /* HotelProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE0F827050014003D5E25 /* HotelProjectUITestsLaunchTests.swift */; };
 		E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22DE10627061D04003D5E25 /* RoomSelection.swift */; };
+		E25C6FA027430F010033B1C8 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C6F9F27430F010033B1C8 /* Rooms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		E22DE0F627050014003D5E25 /* HotelProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectUITests.swift; sourceTree = "<group>"; };
 		E22DE0F827050014003D5E25 /* HotelProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E22DE10627061D04003D5E25 /* RoomSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSelection.swift; sourceTree = "<group>"; };
+		E25C6F9F27430F010033B1C8 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			children = (
 				E22DE10627061D04003D5E25 /* RoomSelection.swift */,
 				E207DA762730329700A7F75C /* Utilities.swift */,
+				E25C6F9F27430F010033B1C8 /* Rooms.swift */,
 			);
 			path = "Room Selection";
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				AC44FD0927074C6F002B83C3 /* ReservationSearch.swift in Sources */,
 				ACEE233327050D17001F221B /* LanguageSelection.swift in Sources */,
 				ACEE232F27050BB4001F221B /* Root.swift in Sources */,
+				E25C6FA027430F010033B1C8 /* Rooms.swift in Sources */,
 				9723DC7A27177E1F00321DE6 /* LastPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
