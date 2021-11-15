@@ -14,6 +14,8 @@ struct RoomSelection: View {
     
     @EnvironmentObject var newReservation: NewGuests
     
+    // Add the environment object modifier to the destination
+    
     @State var show = false
     @State var show2 = false
     @State var show3 = false

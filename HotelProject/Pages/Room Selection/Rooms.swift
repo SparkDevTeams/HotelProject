@@ -23,9 +23,13 @@ struct FirstRoom: View {
     @Binding var show: Bool
     
     @State var nextPage: Bool = false
+    
+    @EnvironmentObject var newReservation: NewGuests
 
     func navNext() -> Void {
         nextPage = !nextPage
+        
+        print("First Name: " + newReservation.mainGuestFN)
     }
     
     var body: some View {
@@ -50,7 +54,7 @@ struct FirstRoom: View {
                                 .cornerRadius(20)
                         .multilineTextAlignment(.leading)
                 )})
-                NavigationLink("", destination: PaymentPage(), isActive: $nextPage)
+                NavigationLink("", destination: PaymentPage().environmentObject(newReservation), isActive: $nextPage)
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)
@@ -118,11 +122,12 @@ struct FirstRoom: View {
     }
 }
 
-
 struct SecondRoom: View {
     @Binding var show: Bool
     
     @State var nextPage: Bool = false
+    
+    @EnvironmentObject var newReservation: NewGuests
 
     func navNext() -> Void {
         nextPage = !nextPage
@@ -150,7 +155,7 @@ struct SecondRoom: View {
                                 .cornerRadius(20)
                         .multilineTextAlignment(.leading)
                 )})
-                NavigationLink("", destination: PaymentPage(), isActive: $nextPage)
+                NavigationLink("", destination: PaymentPage().environmentObject(newReservation), isActive: $nextPage)
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)
@@ -218,11 +223,12 @@ struct SecondRoom: View {
     }
 }
 
-
 struct ThirdRoom: View {
     @Binding var show: Bool
     
     @State var nextPage: Bool = false
+    
+    @EnvironmentObject var newReservation: NewGuests
 
     func navNext() -> Void {
         nextPage = !nextPage
@@ -250,7 +256,7 @@ struct ThirdRoom: View {
                                 .cornerRadius(20)
                         .multilineTextAlignment(.leading)
                 )})
-                NavigationLink("", destination: PaymentPage(), isActive: $nextPage)
+                NavigationLink("", destination: PaymentPage().environmentObject(newReservation), isActive: $nextPage)
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)
@@ -322,6 +328,8 @@ struct FourthRoom: View {
     @Binding var show: Bool
     
     @State var nextPage: Bool = false
+    
+    @EnvironmentObject var newReservation: NewGuests
 
     func navNext() -> Void {
         nextPage = !nextPage
@@ -349,7 +357,7 @@ struct FourthRoom: View {
                                 .cornerRadius(20)
                         .multilineTextAlignment(.leading)
                 )})
-                NavigationLink("", destination: PaymentPage(), isActive: $nextPage)
+                NavigationLink("", destination: PaymentPage().environmentObject(newReservation), isActive: $nextPage)
             }
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 300, maxHeight: show ? .infinity : 500, alignment: .top)

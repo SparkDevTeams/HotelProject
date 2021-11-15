@@ -138,7 +138,7 @@ struct NewReservation: View {
                             .padding()
                     })
                     
-                    NavigationLink("Next", isActive: $navigateToNext, destination: {RoomSelection()}).hidden()
+                    NavigationLink("Next", isActive: $navigateToNext, destination: {RoomSelection().environmentObject(newReservation)}).hidden()
                 }
             }
             Spacer()
