@@ -18,32 +18,6 @@ struct RoomSelection: View {
     @State var show2 = false
     var body: some View {
         
-        // Not working for some reason
-    //        ScrollView {
-    //            VStack(spacing: 30) {
-    //                IndividualRoom(show : $show)
-    //                GeometryReader { geometry in
-    //                    IndividualRoom(show: self.$show2)
-    //                }
-    //                .frame(height: 500)
-    //                .frame(maxWidth: .infinity)
-    //            }
-    //            .frame(width: screen.width)
-    //        }
-            
-    //        ScrollView {
-    //            Text("Testing")
-    //            VStack {
-    //                IndividualRoom(show: $show)
-    //                    .frame(width: show ? screen.width : 800, height: show ? screen.height : 500)
-    //                    .edgesIgnoringSafeArea(.bottom)
-    //                    .padding(.bottom, 30)
-    //                IndividualRoom(show: $show2)
-    //            }
-    //            .frame(width: screen.width, height: screen.height)
-    //
-    //        }
-        
         ScrollView {
             VStack(spacing: 30) {
                 
