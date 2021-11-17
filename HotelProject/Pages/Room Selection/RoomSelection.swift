@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-let backgroundColor = Color("secondary")
 
 
 struct RoomSelection: View {
@@ -25,6 +24,7 @@ struct RoomSelection: View {
         ScrollView {
             Text("Select Your Room")
                 .padding(30)
+                .font(.system(size: 39, weight: .bold))
             VStack(spacing: 30) {
                 
                     GeometryReader { geometry in

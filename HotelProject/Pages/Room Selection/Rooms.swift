@@ -83,15 +83,15 @@ struct FirstRoom: View {
                 HStack(alignment: .top) {
 
                     VStack(alignment: .leading, spacing: 8.0) {
-                        Text("Suite from $499")
+                        Text("Suite from $399")
                             .font(.system(size: 34, weight: .bold))
-                            .foregroundColor(.white)
+                            
                     }
                     Spacer()
                     ZStack {
                         Text("Tap for more Information")
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.white)
+                            
                             .frame(width: 100)
                             .opacity(show ? 0 : 1)
 
@@ -128,6 +128,7 @@ struct FirstRoom: View {
             .onTapGesture {
                 self.show.toggle()
             }
+            .shadow(radius: 10)
 
         }
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
@@ -186,13 +187,13 @@ struct SecondRoom: View {
                     VStack(alignment: .leading, spacing: 8.0) {
                         Text("Double Bed from $499")
                             .font(.system(size: 34, weight: .bold))
-                            .foregroundColor(.white)
+                            
                     }
                     Spacer()
                     ZStack {
                         Text("Tap for more Information")
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.white)
+                            
                             .frame(width: 100)
                             .opacity(show ? 0 : 1)
 
@@ -229,6 +230,7 @@ struct SecondRoom: View {
             .onTapGesture {
                 self.show.toggle()
             }
+            .shadow(radius: 10)
 
         }
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
@@ -285,15 +287,15 @@ struct ThirdRoom: View {
                 HStack(alignment: .top) {
 
                     VStack(alignment: .leading, spacing: 8.0) {
-                        Text("Double Bed from $499")
+                        Text("Double Bed from $299")
                             .font(.system(size: 34, weight: .bold))
-                            .foregroundColor(.white)
+                            
                     }
                     Spacer()
                     ZStack {
                         Text("Tap for more Information")
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.white)
+                            
                             .frame(width: 100)
                             .opacity(show ? 0 : 1)
 
@@ -330,6 +332,7 @@ struct ThirdRoom: View {
             .onTapGesture {
                 self.show.toggle()
             }
+            .shadow(radius: 10)
 
         }
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
@@ -386,15 +389,15 @@ struct FourthRoom: View {
                 HStack(alignment: .top) {
 
                     VStack(alignment: .leading, spacing: 8.0) {
-                        Text("Double Bed from $499")
+                        Text("Double Bed from $199")
                             .font(.system(size: 34, weight: .bold))
-                            .foregroundColor(.white)
+                            
                     }
                     Spacer()
                     ZStack {
                         Text("Tap for more Information")
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.white)
+                            
                             .frame(width: 100)
                             .opacity(show ? 0 : 1)
 
@@ -431,6 +434,7 @@ struct FourthRoom: View {
             .onTapGesture {
                 self.show.toggle()
             }
+            .shadow(radius: 10)
 
         }
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
