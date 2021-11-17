@@ -2,7 +2,7 @@
 //  Root.swift
 //  HotelProject
 //
-//  Created by Vincent Carrancho on 9/29/21.
+//  
 //
 
 import SwiftUI
@@ -19,14 +19,22 @@ struct Root: View {
         NavigationView {
             // This is the root naviagtion view.
             // The navigation is controlled by this view.
-            VStack(alignment: .leading) {
-                Text("Welcome to Hotel {Name}!").font(.system(size: 72)).fontWeight(.bold).multilineTextAlignment(.leading)
+            VStack(alignment: .center, spacing: 10) {
+                Text("Welcome to").font(.system(size: 72)).fontWeight(.bold).multilineTextAlignment(.leading)
+                
+                    LinearGradient(gradient: Gradient(colors: [.orange, .red]),
+                                           startPoint: .leading, endPoint: .trailing)
+                                .mask(Text("Hotel SparkDev")
+                                    .font(.system(size: 80, weight: .bold, design: .rounded)))
+                                .frame(width: 600, height: 80, alignment: .center)
+                                .padding(.bottom, 20)
+
                 
                 Button (action: nextClicked, label: {
                     Text("Tap here to begin Check-In or Room Reservation Process.")
                         .font(.system(size: 36))
                         .foregroundColor(Color.black)
-                        .multilineTextAlignment(.leading)
+                        .multilineTextAlignment(.center)
                 })
                 NavigationLink("Next", isActive: $navigateToNext, destination: {LanguageSelection()}).hidden()
             }

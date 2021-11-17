@@ -2,7 +2,7 @@
 //  ReservationSearch.swift
 //  HotelProject
 //
-//  Created by David Barcenas on 9/30/21.
+//
 //
 
 import SwiftUI

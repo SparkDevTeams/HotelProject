@@ -2,7 +2,7 @@
 //  NewReservation.swift
 //  HotelProject
 //
-//  Created by Vincent Carrancho on 9/29/21.
+//  
 //
 
 // This is the start of the new reservation branch of the UI

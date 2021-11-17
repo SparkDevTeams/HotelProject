@@ -2,7 +2,7 @@
 //  LanguageSelection.swift
 //  HotelProject
 //
-//  Created by Vincent Carrancho on 9/29/21.
+// 
 //
 
 import SwiftUI

@@ -2,7 +2,7 @@
 //  LanguageNotSupported.swift
 //  HotelProject
 //
-//  Created by zeshan a khatri on 10/11/21.
+//
 //
 
 import SwiftUI

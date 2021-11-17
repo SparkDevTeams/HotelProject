@@ -2,7 +2,7 @@
 //  CheckIn_or_NewRoom.swift
 //  HotelProject
 //
-//  Created by Vincent Carrancho on 10/3/21.
+//  
 //
 
 import SwiftUI

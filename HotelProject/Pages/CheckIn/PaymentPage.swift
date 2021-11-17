@@ -2,7 +2,7 @@
 //  PaymentPage.swift
 //  HotelProject
 //
-//  Created by David Barcenas on 10/4/21.
+// 
 //
 
 import SwiftUI
@@ -69,7 +69,7 @@ struct PaymentPageTextfieldView: View {
     
     var body: some View{
         VStack{
-            Text("Your total is $xxx.xx for a " +  amountOfNights + " night.")
+            Text("Your total is $499.99 for a" +  amountOfNights + " night.")
                 .font(.system(size: 48))
                 .fontWeight(.medium)
                 .padding()

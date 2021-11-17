@@ -2,7 +2,7 @@
 //  FoundReservation.swift
 //  HotelProject
 //
-//  Created by Vincent Carrancho on 10/6/21.
+// 
 //
 
 import SwiftUI

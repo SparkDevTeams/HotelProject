@@ -2,7 +2,7 @@
 //  NewReservation.swift
 //  HotelProject
 //
-//  Created by vincent carrancho on 11/3/21.
+// 
 //
 
 import Foundation

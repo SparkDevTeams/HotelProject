@@ -2,7 +2,7 @@
 //  Persistence.swift
 //  HotelProject
 //
-//  Created by Joseph Torres on 9/29/21.
+// 
 //
 
 import CoreData

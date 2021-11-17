@@ -10,6 +10,7 @@
 		279ADDB22714E92B0043B5FD /* LanguageNotSupported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279ADDB12714E92B0043B5FD /* LanguageNotSupported.swift */; };
 		61B847BD65E2AED92E0BB9BB /* Pods_HotelProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3110B0809AAE3B695BF40D /* Pods_HotelProject.framework */; };
 		630D3903270E4FA400BD76D3 /* PaymentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630D3902270E4FA400BD76D3 /* PaymentPage.swift */; };
+		63DB80672745BA8B00DD92C0 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DB80662745BA8B00DD92C0 /* Room.swift */; };
 		7F20174155EBBD4AE8573024 /* Pods_HotelProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BDA204A698A171FC915E36 /* Pods_HotelProjectTests.framework */; };
 		9723DC7A27177E1F00321DE6 /* LastPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9723DC7927177E1F00321DE6 /* LastPage.swift */; };
 		97E62B8227332F8400A13B22 /* NewReservationStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E62B8127332F8400A13B22 /* NewReservationStruct.swift */; };
@@ -57,6 +58,7 @@
 		279ADDB12714E92B0043B5FD /* LanguageNotSupported.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageNotSupported.swift; sourceTree = "<group>"; };
 		5EC32C292E43D9642B077307 /* Pods-HotelProject-HotelProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotelProject-HotelProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-HotelProject-HotelProjectUITests/Pods-HotelProject-HotelProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		630D3902270E4FA400BD76D3 /* PaymentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPage.swift; sourceTree = "<group>"; };
+		63DB80662745BA8B00DD92C0 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		9723DC7927177E1F00321DE6 /* LastPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPage.swift; sourceTree = "<group>"; };
 		97E62B8127332F8400A13B22 /* NewReservationStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReservationStruct.swift; sourceTree = "<group>"; };
 		AC439FB8270E3EFD004185CE /* FoundReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundReservation.swift; sourceTree = "<group>"; };
@@ -128,7 +130,6 @@
 				DBD57119372A23944102ECCC /* Pods-HotelProjectTests.debug.xcconfig */,
 				E53F068AA2A2415A23FA6DBB /* Pods-HotelProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -244,6 +245,7 @@
 			children = (
 				E22DE10627061D04003D5E25 /* RoomSelection.swift */,
 				E207DA762730329700A7F75C /* Utilities.swift */,
+				63DB80662745BA8B00DD92C0 /* Room.swift */,
 			);
 			path = "Room Selection";
 			sourceTree = "<group>";
@@ -488,6 +490,7 @@
 			files = (
 				279ADDB22714E92B0043B5FD /* LanguageNotSupported.swift in Sources */,
 				97E62B8227332F8400A13B22 /* NewReservationStruct.swift in Sources */,
+				63DB80672745BA8B00DD92C0 /* Room.swift in Sources */,
 				AC885E5A270BA3F600A5D8DA /* Styles.swift in Sources */,
 				E22DE0E327050014003D5E25 /* HotelProject.xcdatamodeld in Sources */,
 				E22DE10727061D04003D5E25 /* RoomSelection.swift in Sources */,
@@ -665,7 +668,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HotelProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 6TVR966RUH;
+				DEVELOPMENT_TEAM = XQNZSG4U35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -696,7 +699,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HotelProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 6TVR966RUH;
+				DEVELOPMENT_TEAM = XQNZSG4U35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
