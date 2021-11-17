@@ -34,6 +34,11 @@ class NewGuests: ObservableObject {
     @Published var countryRegion = ""
     @Published var phoneNumber = ""
     
+    // This is for the payment information
+    @Published var cardNumber = ""
+    @Published var CVC = ""
+    @Published var expirationDate = ""
+    
     // Below are the fields for the other guests
     
     @Published var otherGuestFN: [String] = []
@@ -61,6 +66,15 @@ class NewGuests: ObservableObject {
     func setPhoneNumber(phone: String) -> Void {
         self.phoneNumber = phone
     }
+    func setCardNumber(number: String) -> Void {
+        self.cardNumber = number
+    }
+    func setCVC(cvc: String) -> Void {
+        self.CVC = cvc
+    }
+    func setExpirationDate(date: String) -> Void {
+        self.expirationDate = date
+    }
    
     // below are the getters
     func getMainGuestFN() -> String {
@@ -83,6 +97,15 @@ class NewGuests: ObservableObject {
     }
     func getPhoneNumber() -> String {
         return self.phoneNumber
+    }
+    func getCardNum() -> String {
+        return self.cardNumber
+    }
+    func getCVC() -> String {
+        return self.CVC
+    }
+    func getExpirationDate() -> String {
+        return self.expirationDate
     }
     
     func writeToDatabase() -> Void {

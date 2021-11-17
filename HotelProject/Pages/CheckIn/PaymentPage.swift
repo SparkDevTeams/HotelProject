@@ -34,7 +34,6 @@ struct PaymentPage: View {
     
     var body: some View {
         VStack{
-            
             PaymentPageTextfieldView(amountOfNights: $amountOfNights, email: $email, confirmEmail: $confirmEmail, cardNumber: $cardNumber, CVC: $CVC, cardholderName: $cardholderName, locationName: $locationName, zipCode: $zipCode, expirationDate: $expirationDate)
             
             ZStack{
@@ -75,7 +74,15 @@ struct PaymentPageTextfieldView: View {
                 .fontWeight(.medium)
                 .padding()
             
-            TextFieldComponent(sfSymbol: "envelope.fill", labelString: "Email", input: email)
+            // sfsymbols: "envelope.fill", "creditcard.fill"
+            // TODO: Extract from TextFieldComponents
+            
+            HStack{
+                Image(systemName: "envelope.fill").padding()
+                TextField("Email", text: $email)
+            }.padding(5)
+                .overlay(RoundedRectangle(
+                    cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
                 
             TextFieldComponent(sfSymbol: "envelope.fill", labelString: "Confirm email", input: confirmEmail)
             

@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import RealmSwift
-
 
 struct Root: View {
     
@@ -21,7 +19,7 @@ struct Root: View {
         NavigationView {
             // This is the root naviagtion view.
             // The navigation is controlled by this view.
-            VStack(alignment: .leading){
+            VStack(alignment: .leading) {
                 Text("Welcome to Hotel {Name}!").font(.system(size: 72)).fontWeight(.bold).multilineTextAlignment(.leading)
                 
                 Button (action: nextClicked, label: {
@@ -30,15 +28,10 @@ struct Root: View {
                         .foregroundColor(Color.black)
                         .multilineTextAlignment(.leading)
                 })
-                
                 NavigationLink("Next", isActive: $navigateToNext, destination: {LanguageSelection()}).hidden()
-                    
-                
             }
-            
         }.navigationViewStyle(StackNavigationViewStyle())
-            .navigationBarHidden(true)
-        
+         .navigationBarHidden(true)
     }
 }
 
