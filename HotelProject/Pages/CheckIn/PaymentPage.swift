@@ -28,6 +28,10 @@ struct PaymentPage: View {
         navigateToNext = !navigateToNext
     }
     
+    func submitData() -> Void {
+        
+    }
+    
     var body: some View {
         VStack{
             

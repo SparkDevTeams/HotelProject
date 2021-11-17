@@ -8,6 +8,7 @@
 // This is the start of the new reservation branch of the UI
 
 import SwiftUI
+import RealmSwift
 
 var totalWidth: CGFloat = 600
 var lineWidth: CGFloat = 2.5
@@ -42,7 +43,12 @@ struct NewReservation: View {
         
         navigateToNext = !navigateToNext
         
-        // We need to save the data
+        app.emailPasswordAuth.registerUser(email: newReservation.getEmailAddress(), password: newReservation.getPhoneNumber()) { error in
+            if let error = error {
+                print ("\(error.localizedDescription)")
+            }
+            
+        }
         
     }
     
@@ -126,7 +132,8 @@ struct NewReservation: View {
                         cornerRadius: 15).stroke(Color.black, lineWidth: lineWidth)).padding().frame(width:totalWidth, height: /*@START_MENU_TOKEN@*/50.0/*@END_MENU_TOKEN@*/).padding()
                 
                 ZStack{
-                    Button (action: nextClicked, label: {
+                    Button (action: nextClicked
+                        , label: {
                         Text("Next")
                             .font(.system(size: 24))
                             .fontWeight(.semibold)

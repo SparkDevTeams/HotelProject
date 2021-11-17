@@ -6,7 +6,24 @@
 //
 
 import Foundation
+import RealmSwift
 
+@objcMembers class ChatMessage: Object, ObjectKeyIdentifiable {
+    dynamic var _id = ObjectId.generate()
+    dynamic var room = ""
+    dynamic var time = Date()
+
+
+    convenience init (room: String) {
+        self.init()
+        self.room = room
+    }
+
+override static func primaryKey() -> String? {
+    return "_id"
+}
+
+}
 class NewGuests: ObservableObject {
     
     @Published var mainGuestFN = ""

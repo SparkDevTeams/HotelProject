@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import RealmSwift
+
 
 struct Root: View {
     
@@ -33,8 +35,10 @@ struct Root: View {
                     
                 
             }
-        }.navigationViewStyle(StackNavigationViewStyle())                    .navigationBarBackButtonHidden(true)
-
+            
+        }.navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarHidden(true)
+        
     }
 }
 

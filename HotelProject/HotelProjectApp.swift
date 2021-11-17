@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
+
+let app = RealmSwift.App(id: "application-0-nqldb")
 
 @main
-struct HotelProjectApp: App {
+struct HotelProjectApp: SwiftUI.App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
