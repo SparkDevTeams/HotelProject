@@ -22,14 +22,7 @@ struct ReservationSearch: View {
                 .padding()
             
             
-            TextField("Tap here to enter your reservation number: ", text: $ReservationNumber)
-                .padding()
-                .background(
-                    Color.gray.opacity(0.2)
-                        .cornerRadius(10)
-                )
-                .font(.system(size: 24))
-                .padding(.horizontal, 100)
+            TextFieldComponent(sfSymbol: "lock.circle.fill", labelString: "Enter your reservation number here", input: ReservationNumber)
             
             ZStack{
                 Button (action: nextClicked, label: {
